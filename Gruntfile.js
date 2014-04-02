@@ -30,6 +30,21 @@ module.exports = function(grunt) {
       prod_img:           '<%= dirs.prod_theme_current %>/img'
     },
 
+    // Run bower install and clean it up
+    bower: {
+      install: {
+        options: {
+          targetDir: './lib',
+          layout: 'byType',
+          install: true,
+          verbose: false,
+          cleanTargetDir: false,
+          cleanBowerDir: false,
+          bowerOptions: {}
+        }
+      }
+    }
+
     // Concatenate
     concat: {   
       js_prod: {

@@ -16,5 +16,15 @@
     "normalize.css": "~3.0.1",
     "neat": "~1.6.0",
     "modernizr": "~2.7.2"
+  },
+  "exportsOverride": {
+    "bootstrap-sass": {
+      "js": "js/*.js",
+      "scss": "lib/*.scss",
+      "img": "img/*.png"
+    },
+    "requirejs": {
+      "js": "require.js"
+    }
   }
 }
