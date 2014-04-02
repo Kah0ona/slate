@@ -5,8 +5,8 @@ node_modules/
 bower_components/
 
 # Build dirs
-css/
-js/build/
+css/*
+js/build/*
 
 # Images
 img/build/*
