@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
       // Production
       prod_theme_root:    '/wp-content/themes',
-      prod_theme_current: '<%= dirs.prod_theme_root %>/goud',
+      prod_theme_current: '<%= dirs.prod_theme_root %>/slate',
       prod_css:           '<%= dirs.prod_theme_current %>/css',
       prod_js:            '<%= dirs.prod_theme_current %>/js',
       prod_js_standalone: '<%= dirs.prod_js %>/standalone',
