@@ -20,6 +20,8 @@ module.exports = function(grunt) {
       dev_img_src:        '<%= dirs.dev_img %>/src',
       dev_img_build:      '<%= dirs.dev_img %>/build',
       dev_scss:           'scss',
+      dev_scss_libs:      '<%= dirs.dev_scss %>/libs',
+      dev_bower:          'bower_components',
 
       // Production
       prod_theme_root:    '/wp-content/themes',
@@ -30,20 +32,62 @@ module.exports = function(grunt) {
       prod_img:           '<%= dirs.prod_theme_current %>/img'
     },
 
-    // Run bower install and clean it up
-    bower: {
-      install: {
-        options: {
-          targetDir: './lib',
-          layout: 'byType',
-          install: true,
-          verbose: false,
-          cleanTargetDir: false,
-          cleanBowerDir: false,
-          bowerOptions: {}
-        }
+    // Copy
+    copy: {
+      bower: {
+        files: [
+
+          // Jquery
+          {
+            cwd: '<%= dirs.dev_bower %>/jquery/dist/',
+            src: 'jquery.js',
+            dest: '<%= dirs.dev_js_standalone %>/',
+            expand: true,
+            flatten: true,
+            filter: 'isFile'
+          },
+
+          // Modernizr
+          {
+            cwd: '<%= dirs.dev_bower %>/modernizr/',
+            src: 'modernizr.js',
+            dest: '<%= dirs.dev_js_standalone %>/',
+            expand: true,
+            flatten: true,
+            filter: 'isFile'
+          },
+
+          // Bourbon
+          {
+            cwd: '<%= dirs.dev_bower %>/bourbon/app/assets/stylesheets/',
+            src: '**',
+            dest: '<%= dirs.dev_scss_libs %>/bourbon/',
+            expand: true
+          },
+
+          // Bourbon Neat
+          {
+            cwd: '<%= dirs.dev_bower %>/neat/app/assets/stylesheets/',
+            src: '**',
+            dest: '<%= dirs.dev_scss_libs %>/neat/',
+            expand: true
+          },
+
+          // Normalize
+          {
+            cwd: '<%= dirs.dev_bower %>/normalize.css/',
+            src: 'normalize.css',
+            dest: '<%= dirs.dev_scss_libs %>/normalize/',
+            expand: true,
+            flatten: true,
+            filter: 'isFile',
+            rename: function(dest, src) {
+              return dest + "_" + src.replace(/\.css$/, ".scss");
+            }
+          }
+        ]
       }
-    }
+    },
 
     // Concatenate
     concat: {   
@@ -69,7 +113,9 @@ module.exports = function(grunt) {
 
     // Clean
     clean: {
-      js_prod: ["<%= dirs.dev_js_build %>/production.js"]
+      options: { force: true },
+      js_prod: ["<%= dirs.dev_js_build %>/production.js"],
+      bower: ["<%= dirs.dev_bower %>"]
     },
 
     // Sass
@@ -202,5 +248,6 @@ module.exports = function(grunt) {
 
   // Define what to do at which command
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('deploy', ['copy:bower','clean:bower']);
 
 };

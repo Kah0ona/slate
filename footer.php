@@ -3,7 +3,7 @@
 	
   <!-- Load jquery from google CDN if possible, with fallback to local version -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/jquery-2.1.0.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/jquery.min.js"><\/script>')</script>
 
 	<!-- Footer javascript below here -->
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/production.min.js"></script>
