@@ -2,21 +2,19 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
-
-			<div class="entry">
+			<div>
 				<?php the_content(); ?>
-
-				<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 			</div>
-		</div>
+		</article>
 		
-		<div class="navigation">
-			<div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-			<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
-		</div>
+		<nav>
+			<div><?php previous_post_link('&laquo; %link') ?></div>
+			<div><?php next_post_link('%link &raquo;') ?></div>
+		</nav>
 
 		<?php comments_template(); ?>
 
