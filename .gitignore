@@ -17,3 +17,5 @@ img/src/*
 
 # Never ignore .gitkeep files
 !.gitkeep
+
+*.swp
