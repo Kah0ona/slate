@@ -9,7 +9,8 @@ css/
 js/build/
 
 # Images
-img/
+img/build/*
+img/src/*
 
 # Private data
 .ftppass
