@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/production.min.css">
 
     <!-- Head scripts, avoid including scripts here -->
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/modernizr.min.js"></script>
+    <!-- Don't forget to compile and minify the used modernizr features, or to remove it when unused -->
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/modernizr.js"></script>
 
     <!-- Wordpress head function -->
     <?php wp_head(); ?>

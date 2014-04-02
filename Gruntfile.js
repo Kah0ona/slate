@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           // Jquery
           {
             cwd: '<%= dirs.dev_bower %>/jquery/dist/',
-            src: 'jquery.js',
+            src: 'jquery.min.js',
             dest: '<%= dirs.dev_js_standalone %>/',
             expand: true,
             flatten: true,
@@ -107,7 +107,6 @@ module.exports = function(grunt) {
 
     // Clean
     clean: {
-      options: { force: true },
       js_prod: ["<%= dirs.dev_js_build %>/production.js"],
       bower: ["<%= dirs.dev_bower %>"]
     },
@@ -220,11 +219,8 @@ module.exports = function(grunt) {
         tasks: ['sass:css_prod','autoprefixer:css_prod','ftpush:css_prod']
       },
       img_prod: {
-        files: ['<%= dirs.dev_img_src %>/*.*'],
-        tasks: ['newer:imagemin:img_prod','delete_sync:img_prod','ftpush:img_prod'],
-        options: {
-          event: ['added', 'changed', 'deleted'],
-        }
+        files: ['<%= dirs.dev_img_src %>/*'],
+        tasks: ['newer:imagemin:img_prod','delete_sync:img_prod','ftpush:img_prod']
       },
       livereload: {
         options: { livereload: true },
