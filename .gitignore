@@ -1,0 +1,18 @@
+# Cache dirs
+.grunt/
+.sass-cache/
+node_modules/
+bower_components/
+
+# Build dirs
+css/
+js/build/
+
+# Images
+img/
+
+# Private data
+.ftppass
+
+# Never ignore .gitkeep files
+!.gitkeep

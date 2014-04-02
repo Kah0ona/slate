@@ -1,0 +1,20 @@
+{
+  "name": "slate_bower_dependencies",
+  "version": "0.1.0",
+  "authors": [
+    "Ismay <ismay@ismaywolff.nl>"
+  ],
+  "description": "Bower dependencies for the Slate theme",
+  "keywords": [
+    "Slate"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bourbon": "~3.1.8",
+    "normalize.css": "~3.0.1",
+    "neat": "~1.6.0",
+    "modernizr": "~2.7.2"
+  },
+}
