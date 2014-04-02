@@ -36,7 +36,8 @@ module.exports = function(grunt) {
     copy: {
       bower: {
         files: [
-
+          /* Standalone js libraries
+          ---------------*/
           // Jquery
           {
             cwd: '<%= dirs.dev_bower %>/jquery/dist/',
@@ -46,7 +47,6 @@ module.exports = function(grunt) {
             flatten: true,
             filter: 'isFile'
           },
-
           // Modernizr
           {
             cwd: '<%= dirs.dev_bower %>/modernizr/',
@@ -56,7 +56,8 @@ module.exports = function(grunt) {
             flatten: true,
             filter: 'isFile'
           },
-
+          /* Scss libraries
+          ---------------*/
           // Bourbon
           {
             cwd: '<%= dirs.dev_bower %>/bourbon/app/assets/stylesheets/',
@@ -64,7 +65,6 @@ module.exports = function(grunt) {
             dest: '<%= dirs.dev_scss_libs %>/bourbon/',
             expand: true
           },
-
           // Bourbon Neat
           {
             cwd: '<%= dirs.dev_bower %>/neat/app/assets/stylesheets/',
@@ -72,18 +72,12 @@ module.exports = function(grunt) {
             dest: '<%= dirs.dev_scss_libs %>/neat/',
             expand: true
           },
-
-          // Normalize
+          // _Normalize.scss
           {
-            cwd: '<%= dirs.dev_bower %>/normalize.css/',
-            src: 'normalize.css',
+            cwd: '<%= dirs.dev_bower %>/modularized-normalize-scss/',
+            src: '**/*.scss',
             dest: '<%= dirs.dev_scss_libs %>/normalize/',
-            expand: true,
-            flatten: true,
-            filter: 'isFile',
-            rename: function(dest, src) {
-              return dest + "_" + src.replace(/\.css$/, ".scss");
-            }
+            expand: true
           }
         ]
       }

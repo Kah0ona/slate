@@ -7,15 +7,21 @@ bower_components/
 # Build dirs
 css/*
 js/build/*
-
-# Images
 img/build/*
+
+# Bower install dirs
+js/libs/*
+scss/libs/*
+!scss/libs/_libs-override.scss
+
+# Source images
 img/src/*
 
 # Private data
 .ftppass
 
+# System files
+*.swp
+
 # Never ignore .gitkeep files
 !.gitkeep
-
-*.swp
