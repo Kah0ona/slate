@@ -1,21 +1,23 @@
-# Cache dirs
+# Cache
 .grunt/
 .sass-cache/
 node_modules/
 bower_components/
 
-# Build dirs
-css/*
+# Build
+css/build/*
 js/build/*
 img/build/*
+ico/build/*
 
-# Bower install dirs
+# Libraries
 js/libs/*
 scss/libs/*
 !scss/libs/_libs-override.scss
 
-# Source images
+# Source
 img/src/*
+ico/src/*
 
 # Private data
 .ftppass
