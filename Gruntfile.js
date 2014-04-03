@@ -16,6 +16,7 @@ module.exports = function(grunt) {
       dev_js_standalone:  '<%= dirs.dev_js %>/standalone',
       dev_js_libs:        '<%= dirs.dev_js %>/libs',
       dev_css:            'css',
+      dev_css_build:      '<%= dirs.dev_css %>/build',
       dev_img:            'img',
       dev_img_src:        '<%= dirs.dev_img %>/src',
       dev_img_build:      '<%= dirs.dev_img %>/build',
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          '<%= dirs.dev_css %>/production.min.css': '<%= dirs.dev_scss %>/global.scss'
+          '<%= dirs.dev_css_build %>/production.min.css': '<%= dirs.dev_scss %>/global.scss'
         }
       }
     },
@@ -129,7 +130,7 @@ module.exports = function(grunt) {
     // Autoprefixer
     autoprefixer: {
       css_prod: {
-       src: '<%= dirs.dev_css %>/production.min.css'
+       src: '<%= dirs.dev_css_build %>/production.min.css'
       }
     },
 
@@ -163,7 +164,7 @@ module.exports = function(grunt) {
           port: 21,
           authKey: 'lokaalgevonden'
         },
-        src: '<%= dirs.dev_css %>',
+        src: '<%= dirs.dev_css_build %>',
         dest: '<%= dirs.prod_css %>',
         simple: true,
         useList: false
@@ -225,7 +226,7 @@ module.exports = function(grunt) {
       livereload: {
         options: { livereload: true },
         files: [
-          '<%= dirs.dev_css %>/production.min.css',
+          '<%= dirs.dev_css_build %>/production.min.css',
           '<%= dirs.dev_js_build %>/production.min.js',
           '<%= dirs.dev_js_standalone %>/*.js']
       }
