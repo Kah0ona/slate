@@ -169,6 +169,17 @@ module.exports = function(grunt) {
         simple: true,
         useList: false
       },
+      css_wordpress: {
+        auth: {
+          host: '178.18.94.73',
+          port: 21,
+          authKey: 'lokaalgevonden'
+        },
+        src: '<%= dirs.dev_css %>/style.css',
+        dest: '<%= dirs.prod_theme_current %>',
+        simple: true,
+        useList: false
+      },
       js_standalone: {
         auth: {
           host: '178.18.94.73',
@@ -218,6 +229,10 @@ module.exports = function(grunt) {
       css_prod: {
         files: ['<%= dirs.dev_scss %>/**/*.scss'],
         tasks: ['sass:css_prod','autoprefixer:css_prod','ftpush:css_prod']
+      },
+      css_wordpress: {
+        files: ['<%= dirs.dev_css %>/style.css'],
+        tasks: ['ftpush:css_wordpress']
       },
       img_prod: {
         files: ['<%= dirs.dev_img_src %>/*'],
