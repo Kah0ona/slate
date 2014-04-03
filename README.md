@@ -1,7 +1,7 @@
 Slate
 =====
 
-A basic wordpress theming framework/boilerplate.
+A basic wordpress framework/boilerplate.
 
 **Dependencies**
 
@@ -16,7 +16,9 @@ A basic wordpress theming framework/boilerplate.
 * Clone the repo to your local working directory
 * Open that directory in terminal/cmd and run "npm install"
 * After that run "bower install"
-* Then run "grunt deploy", and grunt
+* Run "grunt deploy"
+* Run "grunt"
+* Change css/style.css and the working dir in Gruntfile.js to reflect your current theme
 * Ready to go!
 
 **Deploy**
