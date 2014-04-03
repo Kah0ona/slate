@@ -9,7 +9,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-imagemin": "^0.6.0",
+    "grunt-contrib-imagemin": "^0.6.1",
     "grunt-autoprefixer": "^0.7.2",
     "grunt-newer": "^0.7.0",
     "grunt-ftpush": "^0.3.3",

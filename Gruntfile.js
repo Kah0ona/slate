@@ -43,7 +43,7 @@ module.exports = function(grunt) {
           bowerOptions: {}
         }
       }
-    }
+    },
 
     // Concatenate
     concat: {   
