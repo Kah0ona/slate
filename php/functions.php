@@ -95,6 +95,16 @@ function slides_register() {
 }
 
 
+add_action( 'init', 'register_menu' );
+			
+function register_menu(){
+	register_nav_menus( array(
+		'main-nav' => 'Main navigation'
+   	)); 
+}
+
+
+
 // Comment form markup
 if ( ! function_exists( 'theme_comment' ) ) :
 
