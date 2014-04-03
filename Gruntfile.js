@@ -162,6 +162,9 @@ module.exports = function(grunt) {
     // FTP
     // note: exclusions are relative to the src folder
     ftpush: {
+      options: {
+        exclusions: ['/**/.gitkeep', '/**/.gitignore']
+      },
       css_prod: {
         auth: {
           host: '178.18.94.73',
