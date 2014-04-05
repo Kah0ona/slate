@@ -36,10 +36,5 @@
   </head>
   <body <?php body_class(); ?> >
 
-    <!-- Create the navigation -->
-    <?php wp_nav_menu(array(
-        'container'=> 'nav',
-        'menu_id' =>'',
-        'menu_class' =>'Navigation',
-        'theme_location' => 'primary'
-    )); ?>
+    <!-- Main navigation -->
+    <?php include 'includes/navigation.php'; ?>

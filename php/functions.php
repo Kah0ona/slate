@@ -94,7 +94,7 @@ function slides_register() {
 	register_post_type( 'slides' , $args );
 }
 
-
+// Register the main navigation
 add_action( 'init', 'register_menu' );
 			
 function register_menu(){
@@ -102,8 +102,6 @@ function register_menu(){
 		'main-nav' => 'Main navigation'
    	)); 
 }
-
-
 
 // Comment form markup
 if ( ! function_exists( 'theme_comment' ) ) :
