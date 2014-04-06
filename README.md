@@ -31,6 +31,7 @@ A basic wordpress framework/boilerplate.
 **Deploy**
 
 * Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding html5shiv.js and removing the .no-js class from the html element if you're not using modernizr.
+* Load (only) the fonts you're using
 
 **Suggestions**
 
