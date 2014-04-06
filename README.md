@@ -5,19 +5,21 @@ A basic wordpress framework/boilerplate.
 
 **Dependencies**
 
-* Node.js (npm)
-* Ruby
-* Sass
-* Grunt Cli
-* Bower
+* Node.js: [http://nodejs.org/](http://nodejs.org/)
+* Ruby: [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
+* Sass: [http://sass-lang.com/](http://sass-lang.com/)
+* Grunt Cli: [http://gruntjs.com/](http://gruntjs.com/)
+* Bower: [http://bower.io/](http://bower.io/)
 
 **Bundled dependencies**
 
 * Normalize.css: [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/)
 * Bourbon: [http://bourbon.io/](http://bourbon.io/)
 * Bourbon Neat: [http://neat.bourbon.io/](http://neat.bourbon.io/)
+* Jquery: [http://jquery.com/](http://jquery.com/)
+* Modernizr: [http://modernizr.com/](http://modernizr.com/)
 
-**Startup**
+**Getting Started**
 
 * Clone the repo to your local working directory
 * Open that directory in terminal/cmd and run `npm install`
@@ -25,7 +27,6 @@ A basic wordpress framework/boilerplate.
 * Run `grunt deploy`
 * Run `grunt`
 * Change css/style.css and the working dir in Gruntfile.js to reflect your current theme
-* Ready to go!
 
 **Deploy**
 
@@ -33,7 +34,7 @@ A basic wordpress framework/boilerplate.
 
 **Suggestions**
 
-* Respond.js for IE8 media query functionality
+* Use [respond.js](https://github.com/scottjehl/Respond) for IE8 media query functionality
 
 **Documentation**
 
