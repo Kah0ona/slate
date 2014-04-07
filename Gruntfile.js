@@ -163,47 +163,36 @@ module.exports = function(grunt) {
     // note: exclusions are relative to the src folder
     ftpush: {
       options: {
-        exclusions: ['/**/.gitkeep', '/**/.gitignore']
-      },
-      css_prod: {
+        exclusions: ['/**/.gitkeep', '/**/.gitignore'],
         auth: {
           host: '178.18.94.73',
           port: 21,
           authKey: 'lokaalgevonden'
-        },
+        }
+      },
+      css_prod: {
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_css_build %>',
         dest: '<%= dirs.prod_css %>',
         simple: true,
         useList: false
       },
       css_wordpress: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_css %>/style.css',
         dest: '<%= dirs.prod_theme_current %>',
         simple: true,
         useList: false
       },
       js_standalone: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_js_standalone %>',
         dest: '<%= dirs.prod_js_standalone %>',
         simple: false,
         useList: false
       },
       js_prod: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_js_build %>',
         dest: '<%= dirs.prod_js %>',
         keep: ['/standalone/*.js'],
@@ -211,33 +200,21 @@ module.exports = function(grunt) {
         useList: false
       },
       img_prod: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_img_build %>',
         dest: '<%= dirs.prod_img %>',
         simple: false,
         useList: false
       },
       ico_prod: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_ico_build %>',
         dest: '<%= dirs.prod_theme_current %>',
         simple: false,
         useList: false
       },
       php_prod: {
-        auth: {
-          host: '178.18.94.73',
-          port: 21,
-          authKey: 'lokaalgevonden'
-        },
+        auth: '<%= ftpush.options.auth %>',
         src: '<%= dirs.dev_php %>',
         dest: '<%= dirs.prod_theme_current %>',
         simple: false,
