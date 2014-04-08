@@ -11,7 +11,7 @@ img/build/*
 ico/build/*
 
 # Libraries
-js/libs/*
+js/standalone/*
 scss/libs/*
 !scss/libs/_libs-override.scss
 
@@ -24,6 +24,8 @@ ico/src/*
 
 # System files
 *.swp
+[Tt]humbs.db
+*.DS_Store
 
 # Never ignore .gitkeep files
 !.gitkeep
