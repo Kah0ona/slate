@@ -1,0 +1,5 @@
+js_prod:
+  src:
+    - '<%= dirs.dev_js_libs %>/*.js'
+    - '<%= dirs.dev_js_src %>/*.js'
+  dest: '<%= dirs.dev_js_build %>/production.js'

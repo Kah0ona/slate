@@ -1,0 +1,2 @@
+css_prod:
+  src: '<%= dirs.dev_css_build %>/production.min.css'

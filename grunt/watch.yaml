@@ -1,0 +1,51 @@
+js_prod:
+  files:
+    - '<%= dirs.dev_js_src %>/*.js'
+    - '<%= dirs.dev_js_libs %>/*.js'
+  tasks:
+    - 'concat:js_prod'
+    - 'uglify:js_prod'
+    - 'clean:js_prod'
+    - 'ftpush:js_prod'
+js_standalone:
+  files:
+    - '<%= dirs.dev_js_standalone %>/*.js'
+  tasks:
+    - 'ftpush:js_standalone'
+css_prod:
+  files:
+    - '<%= dirs.dev_scss %>/**/*.scss'
+  tasks:
+    - 'sass:css_prod'
+    - 'autoprefixer:css_prod'
+    - 'ftpush:css_prod'
+css_wordpress:
+  files:
+    - '<%= dirs.dev_css %>/style.css'
+  tasks:
+    - 'ftpush:css_wordpress'
+img_prod:
+  files:
+    - '<%= dirs.dev_img_src %>/*'
+  tasks:
+    - 'newer:imagemin:img_prod'
+    - 'delete_sync:img_prod'
+    - 'ftpush:img_prod'
+ico_prod:
+  files:
+    - '<%= dirs.dev_ico_src %>/*'
+  tasks:
+    - 'ftpush:ico_prod'
+php_prod:
+  files:
+    - '<%= dirs.dev_php %>/*'
+  tasks:
+    - 'ftpush:php_prod'
+livereload:
+  options:
+    livereload: true
+  files:
+    - '<%= dirs.dev_css_build %>/production.min.css'
+    - '<%= dirs.dev_php %>/*.php'
+    - '<%= dirs.dev_js_build %>/production.min.js'
+    - '<%= dirs.dev_js_standalone %>/*.js'

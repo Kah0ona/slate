@@ -1,0 +1,4 @@
+img_prod:
+  cwd: '<%= dirs.dev_img_build %>'
+  src: '**'
+  syncWith: '<%= dirs.dev_img_src %>'

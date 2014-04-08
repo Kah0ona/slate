@@ -1,0 +1,5 @@
+default:
+  - 'watch'
+deploy:
+  - 'copy:bower'
+  - 'clean:bower'
