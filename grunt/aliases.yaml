@@ -1,4 +1,10 @@
 default:
+  - 'exit'
+init:
+  - 'watch'
+catchup:
+  - 'watch'
+develop:
   - 'watch'
 deploy:
   - 'copy:bower'
