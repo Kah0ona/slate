@@ -2,7 +2,7 @@
   <content><![CDATA[
 // ----- ${1:Comment} ----- //
 ]]></content>
-  <tabTrigger>comshort</tabTrigger>
+  <tabTrigger>slate-com-h3</tabTrigger>
   <scope>source.scss, source.sass</scope>
-  <description>Short comment</description>
+  <description>Slate H3 comment</description>
 </snippet>

@@ -41,7 +41,7 @@
 
 // .Module-subModule
 ]]></content>
-  <tabTrigger>module</tabTrigger>
+  <tabTrigger>slate-mod</tabTrigger>
   <scope>source.scss, source.sass</scope>
-  <description>Default Module</description>
+  <description>Slate default module</description>
 </snippet>

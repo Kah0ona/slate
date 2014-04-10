@@ -2,7 +2,7 @@
   <content><![CDATA[
 // ${1:Comment}
 ]]></content>
-  <tabTrigger>commini</tabTrigger>
+  <tabTrigger>slate-com-h4</tabTrigger>
   <scope>source.scss, source.sass</scope>
-  <description>Mini comment</description>
+  <description>Slate H4 comment</description>
 </snippet>

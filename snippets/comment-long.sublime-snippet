@@ -4,7 +4,7 @@
 // ${1:Comment}
 // -------------------------------------
 ]]></content>
-  <tabTrigger>comlong</tabTrigger>
+  <tabTrigger>slate-com-h2</tabTrigger>
   <scope>source.scss, source.sass</scope>
-  <description>Long comment</description>
+  <description>Slate H2 comment</description>
 </snippet>

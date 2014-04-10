@@ -7,7 +7,7 @@
 //
 // *************************************
 ]]></content>
-  <tabTrigger>comhead</tabTrigger>
+  <tabTrigger>slate-com-h1</tabTrigger>
   <scope>source.scss, source.sass</scope>
-  <description>Header comment</description>
+  <description>Slate H1 comment</description>
 </snippet>
