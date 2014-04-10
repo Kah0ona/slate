@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[
+// *************************************
+//
+// Module
+// -> This is an example module
+//
+// *************************************
+
+// .Module
+
+// -------------------------------------
+// Module specific variables
+// -------------------------------------
+
+// $Module-variable
+
+// -------------------------------------
+// Modifiers
+// -------------------------------------
+
+// .Module--modifierName
+
+// -------------------------------------
+// States
+// -------------------------------------
+
+// .is-module-state
+
+// -------------------------------------
+// Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+// Submodules
+// -------------------------------------
+
+// ----- Submodule ----- //
+
+// .Module-subModule
+]]></content>
+  <tabTrigger>module</tabTrigger>
+  <scope>source.scss, source.sass</scope>
+  <description>Default Module</description>
+</snippet>
