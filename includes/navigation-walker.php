@@ -6,7 +6,7 @@ if ( ! function_exists( 'navigation_walker_setup' ) ):
 
 	function navigation_walker_setup(){
 
-		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
+		class Slate_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 			
 			function start_lvl( &$output, $depth ) {
