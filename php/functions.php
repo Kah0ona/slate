@@ -103,6 +103,12 @@ function register_menu(){
    	)); 
 }
 
+// Include Walker class
+
+$includes_path = TEMPLATEPATH . '/includes/';
+
+require_once ($includes_path . 'navigation-walker.php');
+
 // Comment form markup
 if ( ! function_exists( 'theme_comment' ) ) :
 
