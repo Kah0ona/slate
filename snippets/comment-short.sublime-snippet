@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+// ----- ${1:Comment} ----- //
+]]></content>
+  <tabTrigger>comshort</tabTrigger>
+  <scope>source.scss, source.sass</scope>
+  <description>Short comment</description>
+</snippet>

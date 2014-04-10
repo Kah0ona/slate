@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+// -------------------------------------
+// ${1:Comment}
+// -------------------------------------
+]]></content>
+  <tabTrigger>comlong</tabTrigger>
+  <scope>source.scss, source.sass</scope>
+  <description>Long comment</description>
+</snippet>

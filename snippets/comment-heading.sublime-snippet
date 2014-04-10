@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+// *************************************
+//
+//   ${1:Comment}
+//   -> ${2:Description}
+//
+// *************************************
+]]></content>
+  <tabTrigger>comhead</tabTrigger>
+  <scope>source.scss, source.sass</scope>
+  <description>Header comment</description>
+</snippet>
