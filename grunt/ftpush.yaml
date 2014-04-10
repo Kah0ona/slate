@@ -22,7 +22,7 @@ js_standalone:
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_js_standalone %>'
   dest: '<%= dirs.prod_js_standalone %>'
-  simple: false
+  simple: true
   useList: false
 js_prod: 
   auth: '<%= ftpush.options.auth %>'
@@ -35,17 +35,17 @@ img_prod:
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_img_build %>'
   dest: '<%= dirs.prod_img %>'
-  simple: false
+  simple: true
   useList: false
 ico_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_ico_build %>'
   dest: '<%= dirs.prod_theme_current %>'
-  simple: false
+  simple: true
   useList: false
 php_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_php %>'
   dest: '<%= dirs.prod_theme_current %>'
-  simple: false
+  simple: true
   useList: false
