@@ -41,7 +41,10 @@ if ( ! function_exists( 'navigation_walker_setup' ) ):
 				$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 				$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 				$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-				$attributes .= ' class="Navigation-link Navigation-link--invertedBold"';
+
+				$activeClass = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
+
+				$attributes .= ' class="Navigation-link Navigation-link--invertedBold '.$activeClass.'"';
 
 				$item_output = $args->before;
 				$item_output .= '<a'. $attributes .'>';
