@@ -25,7 +25,7 @@ if ( ! function_exists( 'navigation_walker_setup' ) ):
 
 				$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 				$classes[] = ($args->has_children) ? 'dropdown' : '';
-				$classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
+				$classes[] = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
 				$classes[] = 'menu-item-' . $item->ID;
 				$classes[] = 'Navigation-listItem';
 
