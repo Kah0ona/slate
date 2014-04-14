@@ -11,41 +11,41 @@ css_prod:
   src: '<%= dirs.dev_css_build %>'
   dest: '<%= dirs.prod_css %>'
   simple: true
-  useList: false
+  useList: true
 css_wordpress: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_css %>/style.css'
   dest: '<%= dirs.prod_theme_current %>'
   simple: true
-  useList: false
+  useList: true
 js_standalone: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_js_standalone %>'
   dest: '<%= dirs.prod_js_standalone %>'
   simple: true
-  useList: false
+  useList: true
 js_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_js_build %>'
   dest: '<%= dirs.prod_js %>'
   keep: '/standalone/*.js'
   simple: true
-  useList: false
+  useList: true
 img_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_img_build %>'
   dest: '<%= dirs.prod_img %>'
   simple: true
-  useList: false
+  useList: true
 ico_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_ico_build %>'
   dest: '<%= dirs.prod_theme_current %>'
   simple: true
-  useList: false
+  useList: true
 php_prod: 
   auth: '<%= ftpush.options.auth %>'
   src: '<%= dirs.dev_php %>'
   dest: '<%= dirs.prod_theme_current %>'
   simple: true
-  useList: false
+  useList: true
