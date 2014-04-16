@@ -5,6 +5,6 @@
 // -------------------------------------
 ]]></content>
   <tabTrigger>slate-com-h2</tabTrigger>
-  <scope>source.scss, source.sass</scope>
+  <scope>source.scss, source.sass, source.js</scope>
   <description>Slate H2 comment</description>
 </snippet>

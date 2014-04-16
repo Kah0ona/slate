@@ -8,6 +8,6 @@
 // *************************************
 ]]></content>
   <tabTrigger>slate-com-h1</tabTrigger>
-  <scope>source.scss, source.sass</scope>
+  <scope>source.scss, source.sass, source.js</scope>
   <description>Slate H1 comment</description>
 </snippet>
