@@ -1,12 +1,12 @@
 // *************************************
 //
 //   Navigation dropdown
-//   -> Example: http://codepen.io/anon/pen/FymDB
+//   -> Example: http://codepen.io/anon/pen/lkgqx
 //
 // *************************************
 
 $(document).ready(function() {
     $('.has-dropdown').click(function() {
-        $('.dropdown').toggleClass('is-hidden');
+      $(this).siblings('.dropdown').toggleClass('is-hidden');
     });
 });
