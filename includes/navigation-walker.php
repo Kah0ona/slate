@@ -1,108 +1,116 @@
 <?php
+add_action( 'after_setup_theme', 'navigation_walker_setup2' );
 
-add_action( 'after_setup_theme', 'navigation_walker_setup' );
+function navigation_walker_setup2(){
 
-if ( ! function_exists( 'navigation_walker_setup' ) ):
+    class Slate_Walker_Nav_Menu2 extends Walker_Nav_Menu {
+      protected $counter = 0;
+      
+      function start_lvl( &$output, $depth ) {
+        $indent = str_repeat( "\t", $depth );
+        $output    .= "\n$indent<ul class='dropdown is-hidden'>\n";
+        
+      }
 
-	function navigation_walker_setup(){
+      function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+        if($this->counter == 3){
+          $output .= '<li class="Logo"><img src="'.get_stylesheet_directory_uri().'/img/logo.png" class="Logo-img"/></li>';
+        }
 
-		class Slate_Walker_Nav_Menu extends Walker_Nav_Menu {
+        if($depth == 0){
+          $this->counter++;
+        }
 
-			
-			function start_lvl( &$output, $depth ) {
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-				$indent = str_repeat( "\t", $depth );
-				$output	   .= "\n$indent<ul>\n";
-				
-			}
+        $li_attributes = '';
+        $class_names = $value = '';
 
-			function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-				
-				$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $classes[] = ($args->has_children) ? 'dropdown' : '';
+        $classes[] = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
+        $classes[] = 'menu-item-' . $item->ID;
+        $classes[] = 'Navigation-listItem';
+      
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+        $class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-				$li_attributes = '';
-				$class_names = $value = '';
+        $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+        $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 
-				$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-				$classes[] = ($args->has_children) ? 'dropdown' : '';
-				$classes[] = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
-				$classes[] = 'menu-item-' . $item->ID;
-				$classes[] = 'Navigation-listItem';
+        $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
-				$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-				$class_names = ' class="' . esc_attr( $class_names ) . '"';
+        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 
-				$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-				$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
+        $activeClass = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
 
-				$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
+        $hasDropdown = '';
+        if($args->has_children) {
+          $hasDropdown = 'has-dropdown';
+        }
 
-				$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-				$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-				$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-				$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 
-				$activeClass = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
+        $attributes .= ' class="Navigation-link Navigation-link--invertedBold '.$activeClass.' '.$hasDropdown.'"';
+        $item_output = $args->before;
+        $item_output .= '<a'. $attributes .'>';
+        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        $item_output .= ($args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
+        $item_output .= $args->after;
 
-				$attributes .= ' class="Navigation-link Navigation-link--invertedBold '.$activeClass.'"';
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+      }
 
-				$item_output = $args->before;
-				$item_output .= '<a'. $attributes .'>';
-				$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-				$item_output .= ($args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
-				$item_output .= $args->after;
+      function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
 
-				$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-			}
+        if ( !$element )
+          return;
+        
+        $id_field = $this->db_fields['id'];
 
-			function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-				
-				if ( !$element )
-					return;
-				
-				$id_field = $this->db_fields['id'];
+        //display this element
+        if ( is_array( $args[0] ) ) 
+          $args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
+        else if ( is_object( $args[0] ) ) 
+          $args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+        $cb_args = array_merge( array(&$output, $element, $depth), $args);
+        call_user_func_array(array(&$this, 'start_el'), $cb_args);
 
-				//display this element
-				if ( is_array( $args[0] ) ) 
-					$args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-				else if ( is_object( $args[0] ) ) 
-					$args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
-				$cb_args = array_merge( array(&$output, $element, $depth), $args);
-				call_user_func_array(array(&$this, 'start_el'), $cb_args);
+        $id = $element->$id_field;
 
-				$id = $element->$id_field;
+        // descend only when the depth is right and there are childrens for this element
+        if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
 
-				// descend only when the depth is right and there are childrens for this element
-				if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
+          foreach( $children_elements[ $id ] as $child ){
 
-					foreach( $children_elements[ $id ] as $child ){
+            if ( !isset($newlevel) ) {
+              $newlevel = true;
+              //start the child delimiter
+              $cb_args = array_merge( array(&$output, $depth), $args);
+              call_user_func_array(array(&$this, 'start_lvl'), $cb_args);
+            }
+            $this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+          }
+            unset( $children_elements[ $id ] );
+        }
 
-						if ( !isset($newlevel) ) {
-							$newlevel = true;
-							//start the child delimiter
-							$cb_args = array_merge( array(&$output, $depth), $args);
-							call_user_func_array(array(&$this, 'start_lvl'), $cb_args);
-						}
-						$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
-					}
-						unset( $children_elements[ $id ] );
-				}
+        if ( isset($newlevel) && $newlevel ){
+          //end the child delimiter
+          $cb_args = array_merge( array(&$output, $depth), $args);
+          call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
+        }
 
-				if ( isset($newlevel) && $newlevel ){
-					//end the child delimiter
-					$cb_args = array_merge( array(&$output, $depth), $args);
-					call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
-				}
+        //end this element
+        $cb_args = array_merge( array(&$output, $element, $depth), $args);
+        call_user_func_array(array(&$this, 'end_el'), $cb_args);
+        
+      }
+      
+    }
 
-				//end this element
-				$cb_args = array_merge( array(&$output, $element, $depth), $args);
-				call_user_func_array(array(&$this, 'end_el'), $cb_args);
-				
-			}
-			
-		}
+}
 
-	}
 
-endif;
 ?>
