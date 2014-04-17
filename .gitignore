@@ -12,8 +12,8 @@ ico/build/*
 
 # Libraries
 js/standalone/*
-scss/libs/*
-!scss/libs/wp/_wp.scss
+scss/libs/**
+!scss/libs/wp/*
 !scss/libs/_libs-override.scss
 
 # Source
