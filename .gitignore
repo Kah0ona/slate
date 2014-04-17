@@ -4,21 +4,14 @@
 node_modules/
 bower_components/
 
-# Build
-css/build/*
-js/build/*
-img/build/*
-ico/build/*
+# Built
+build/*
+deploy/*
 
 # Libraries
-js/standalone/*
-scss/libs/*
-!scss/libs/wp
-!scss/libs/_libs-override.scss
-
-# Source
-img/src/*
-ico/src/*
+lib/*
+!lib/scss/wp
+!lib/scss/_libs-override.scss
 
 # Private data
 .ftppass
@@ -27,6 +20,3 @@ ico/src/*
 *.swp
 [Tt]humbs.db
 *.DS_Store
-
-# Never ignore .gitkeep files
-!.gitkeep
