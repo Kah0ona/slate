@@ -1,1 +1,1 @@
-bower: '<%= dirs.dev_bower %>'
+bower: 'bower_components'

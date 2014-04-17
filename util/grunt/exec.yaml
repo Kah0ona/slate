@@ -1,2 +1,1 @@
-exec:
-  bower: 'bower install'
+bower: 'bower install'
