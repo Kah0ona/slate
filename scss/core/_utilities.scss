@@ -1,0 +1,84 @@
+// *************************************
+//
+//   Utilities
+//   -> Single purpose declarations
+//
+// *************************************
+
+// -------------------------------------
+// Micro utilities
+// -------------------------------------
+
+.u-cf {
+  @include clearfix;
+}
+
+.u-hide {
+  display: none;
+}
+
+// -------------------------------------
+// Layout
+// -------------------------------------
+
+.u-layoutBlock {
+  display: block;
+}
+
+.u-layoutFullWidth {
+  width: 100%;
+}
+
+// -------------------------------------
+// Grid
+// -------------------------------------
+
+.u-gridContainer {
+  @include outer-container;
+  padding-left: $l-insideGutter;
+  padding-right: $l-insideGutter;
+}
+
+.u-gridRow {
+  @include row();
+}
+
+// -------------------------------------
+// Text
+// -------------------------------------
+
+.u-textShout {
+  text-transform: uppercase;
+}
+
+.u-textFat {
+  font-weight: bold;
+}
+
+.u-textLead {
+  font-size: 125%;
+}
+
+.u-textRight {
+  text-align: right;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-textLeft {
+  text-align: left;
+}
+
+// -------------------------------------
+// Objects
+// -------------------------------------
+
+.u-objLeft {
+  float: left;
+}
+
+.u-objRight {
+  float: right;
+}

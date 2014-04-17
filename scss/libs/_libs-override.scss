@@ -1,7 +1,34 @@
-// ========================================================================================================================
+// *************************************
+//
 // Libs override
-// -------------
-// Make any changes you want to make to the libraries here, so that your changes aren't lost after
-// an update.
-// ========================================================================================================================
+// -> For changes to the used libraries
+//
+// *************************************
 
+// -------------------------------------
+// Bourbon
+// -------------------------------------
+
+$prefix-for-microsoft : false;
+$prefix-for-mozilla   : false;
+$prefix-for-opera     : false;
+$prefix-for-spec      : false;
+$prefix-for-webkit    : false;
+
+// -------------------------------------
+// Bourbon Neat
+// -------------------------------------
+
+// ----- Box sizing everywhere ----- //
+$border-box-sizing : true;
+
+// ----- Grid settings ----- //
+$grid-columns      : 12;
+$column            : golden-ratio(1em, 3);
+$gutter            : golden-ratio(1em, 1);
+
+// ----- 61.25rem = 980px / 16px ----- //
+$max-width         : 61.25rem;
+
+// ----- Default media query type ----- //
+$default-feature   : min-width;

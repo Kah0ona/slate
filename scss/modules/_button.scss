@@ -1,0 +1,60 @@
+// *************************************
+//
+// Button
+// -> All buttons
+//
+// *************************************
+
+.Button {
+  display: inline-block;
+  font-weight: bold;
+  padding: rem(10px) rem(5px);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// -------------------------------------
+// Module specific variables
+// -------------------------------------
+
+// -variable
+
+// -------------------------------------
+// Modifiers
+// -------------------------------------
+
+// ----- Default ----- //
+
+.Button--default {
+  color: $c-white;
+  fill: $c-white;
+}
+
+// ----- Brand ----- //
+
+.Button--brand {
+  color: $c-white;
+  fill: $c-white;
+  background: $c-blue;
+}
+
+// -------------------------------------
+// States
+// -------------------------------------
+
+// .is-module-state
+
+// -------------------------------------
+// Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+// Submodules
+// -------------------------------------
+
+// ----- Submodule ----- //
+
+// .Module-subModule

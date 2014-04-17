@@ -1,0 +1,70 @@
+// *************************************
+//
+// EqualHeight
+// -> A component for equal height cols
+//
+// *************************************
+
+.EqualHeight {
+  display: table;
+}
+
+// -------------------------------------
+// Module specific variables
+// -------------------------------------
+
+// Module-variableName
+
+// -------------------------------------
+// Modifiers
+// -------------------------------------
+
+// ----- Carousel ----- //
+
+.EqualHeight--carousel {
+  border-spacing: $l-insideGutter;
+
+  .EqualHeight-column {
+    width: 45%;
+  }
+
+  .EqualHeight-column--withText {
+    padding-left: $l-insideGutter;
+    padding-right: $l-insideGutter;
+    background: $c-blue;
+  }
+}
+
+// ----- With Image ----- //
+
+.EqualHeight-column--withImage {
+  vertical-align: top;
+}
+
+.EqualHeight-column--withImage-image {
+  display: block;
+  width: 100%;
+}
+
+// -------------------------------------
+// States
+// -------------------------------------
+
+// .is-module-state
+
+// -------------------------------------
+// Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+// Submodules
+// -------------------------------------
+
+// ----- Column ----- //
+
+.EqualHeight-column {
+  display: table-cell;
+  border-collapse: separate;
+}

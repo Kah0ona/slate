@@ -1,0 +1,74 @@
+// *************************************
+//
+// Article
+// -> An article module
+//
+// *************************************
+
+.Article {
+  margin-top: rem(40px);
+}
+
+// -------------------------------------
+// Module specific variables
+// -------------------------------------
+
+// Module-variableName
+
+// -------------------------------------
+// Modifiers
+// -------------------------------------
+
+// ----- Inverted ----- //
+
+.Article--inverted {
+  margin-top: rem(10px);
+
+  .Article-heading {
+    color: $c-white;
+  }
+
+  .Article-tagline {
+    color: $c-white;
+  }
+
+  .Article-content {
+    color: shade($c-blue, 50%);
+    font-weight: bold;  
+  }
+}
+
+// -------------------------------------
+// States
+// -------------------------------------
+
+// .is-module-state
+
+// -------------------------------------
+// Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+// Submodules
+// -------------------------------------
+
+// ----- Title ----- //
+
+.Article-heading {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+// ----- Subtitle ----- //
+
+.Article-tagline {
+  margin: 0;
+  font-weight: bold;
+}
+
+// ----- Content ----- //
+
+.Article-content {
+}

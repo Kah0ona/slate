@@ -1,68 +1,65 @@
-// ========================================================================================================================
-// Imports
-// -------
-// Here all scss files from each subfolder are imported, don't forget to import the ones you want to use.
-// For documentation see https://github.com/coreybruyere/530-framework/blob/master/README.md
-// ========================================================================================================================
+// *************************************
+//
+// Global.scss
+// -> Slate v0.1.0
+//
+// *************************************
 
-  /* Libs
-  -------
-  All libraries are imported here, and if necessary overridden
-  from libs-override. */
-  @import "libs/normalize/normalize";
-  @import "libs/bourbon/bourbon";
-  @import "libs/neat/neat";
-  @import "libs/libs-override";
+// -------------------------------------
+// Libs
+// -------------------------------------
 
+// ----- Reset ----- //
+@import "libs/normalize/normalize";
 
-  /* Helpers
-  ----------
-  Put @font-face and variables of any kind in settings, and 
-  extends, mixins, functions, hooks and utilities in helpers. */
-  @import "helpers/settings";
-  @import "helpers/helpers";
+// ----- Bourbon ----- //
+@import "libs/bourbon/bourbon";
 
+// ----- Bourbon Neat ----- //
+@import "libs/neat/neat";
 
-  /* Core
-  -------
-  All global rules without any specific target go here; such as 
-  base-level tags (body, p, ul, etc.), typography rules, etc. */
-  @import "core/base";
-  @import "core/typography";
+// ----- Native wordpress styles ----- //
+@import "libs/wp/wp";
 
-  
-  /* Layout
-  ---------
-  Major structural pieces, main content div wraps. Good examples
-  are: Header, Footer, Sidebar, Header container wrap, Main 
-  content containers, etc. Bad examples are: Header nav (nav styles
-  can be reused multiple times, better built as a component. */
+// ----- Override ----- //
+@import "libs/libs-override";
 
+// -------------------------------------
+// Core
+// -------------------------------------
 
-  /* Components
-  -------------
-  Any unit of style that can be found across multiple pages (Buttons,
-  Navigations, Carousels, Modals). Components are stand alone pieces
-  that can be reused anywhere without having to rewrite any code. */
+// ----- Settings ----- //
+@import "core/settings";
 
-  /* Pages
-  --------
-  This should rarely be used. Think crazy feature with NO reusuable 
-  components AT ALL. Name the file after the page it applies to. */
+// ----- Helpers ----- //
+@import "core/helpers";
 
+// ----- Base ----- //
+@import "core/base";
 
-// ========================================================================================================================
-// Shame / inbox
-// -------------
-// Put any quick fixes, hacks, and other questionable techniques here. Be sure to fix them later.
-// ========================================================================================================================
+// ----- Content ----- //
+@import "core/utilities";
 
+// -------------------------------------
+// Modules
+// -------------------------------------
 
+@import "modules/article";
 
-// ========================================================================================================================
-// IE Fixes
-// --------
-// Make any IE specific changes in the ie partial. They will be imported last of all stylesheets
-// ========================================================================================================================
+@import "modules/button";
 
-  @import "ie";
+@import "modules/equalheight";
+
+@import "modules/header";
+
+@import "modules/icon";
+
+@import "modules/logo";
+
+@import "modules/navigation";
+
+@import "modules/table";
+
+// -------------------------------------
+// Inbox
+// -------------------------------------

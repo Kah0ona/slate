@@ -1,0 +1,60 @@
+// *************************************
+//
+// Settings
+// -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+// @font-face
+// -------------------------------------
+
+// Open Sans Light
+@include font-face(Open Sans Light, '../fonts/opensans/opensans-light-webfont', normal, normal);
+@include font-face(Open Sans Light, '../fonts/opensans/opensans-lightitalic-webfont', normal, italic);
+
+// Open Sans Regular
+@include font-face(Open Sans, '../fonts/opensans/opensans-regular-webfont', normal, normal);
+@include font-face(Open Sans, '../fonts/opensans/opensans-bold-webfont', bold, normal);
+@include font-face(Open Sans, '../fonts/opensans/opensans-italic-webfont', normal, italic);
+
+// Open Sans Semi Bold
+@include font-face(Open Sans Semi Bold, '../fonts/opensans/opensans-semibold-webfont', bold, normal);
+@include font-face(Open Sans Semi Bold, '../fonts/opensans/opensans-semibolditalic-webfont', bold, italic);
+
+// Open Sans Bold
+@include font-face(Open Sans Bold, '../fonts/opensans/opensans-bold-webfont', bold, normal);
+@include font-face(Open Sans Bold, '../fonts/opensans/opensans-bolditalic-webfont', bold, italic);
+
+// Open Sans Extra Bold
+@include font-face(Open Sans Extra Bold, '../fonts/opensans/opensans-extrabold-webfont', bold, normal);
+@include font-face(Open Sans Extra Bold, '../fonts/opensans/opensans-extrabolditalic-webfont', bold, italic);
+
+// Hobo
+@include font-face(Hobo, '../fonts/hobo/hobo-webfont', normal, normal);
+
+// -------------------------------------
+// Variables
+// -------------------------------------
+
+// ----- Colors ----- //
+
+$c-black : #1B1C17;
+$c-blue  : #0070AF;
+$c-white : #EFEFEF;
+
+// ----- Layout ----- //
+$l-whiteSpace: 0.5rem;
+$l-insideGutter: 1rem;
+
+// Borders & Box-shadows
+$l-border         : 1px solid $c-black;
+$l-borderRadius   : 3px;
+$l-boxShadow      : 0 1px 2px rgba($c-black, 0.25);
+
+// ----- Text ----- //
+
+$t-fontFamily       : 'Open Sans', $helvetica;
+$t-headerFontFamily : 'Open Sans', $helvetica;
+$t-fontSize         : 16px;
+$t-lineHeight       : 1.5;
