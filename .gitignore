@@ -10,7 +10,7 @@ deploy/*
 
 # Libraries
 lib/*
-!lib/scss/wp
+!lib/scss/wp/*
 !lib/scss/_libs-override.scss
 
 # Private data
