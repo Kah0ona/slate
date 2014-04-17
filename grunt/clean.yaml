@@ -1,2 +1,0 @@
-js_prod: '<%= dirs.dev_js_build %>/production.js'
-bower: '<%= dirs.dev_bower %>'

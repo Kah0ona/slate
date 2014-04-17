@@ -1,0 +1,13 @@
+options:
+  banner: '/*! Created on <%= grunt.template.today("mm-dd-yyyy") %> at <%= grunt.template.today("HH:MM") %> */'
+deploy:
+  options:
+    style: 'compressed'
+  files:
+    'build/css/production.min.css': 'src/scss/global.scss'
+develop:
+  options:
+    style: 'expanded'
+    sourcemap: true
+  files:
+    'build/css/production.min.css': 'src/scss/global.scss'

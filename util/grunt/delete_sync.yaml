@@ -1,0 +1,12 @@
+phptemplates:
+  cwd: 'src/php/templates'
+  src: '*.php'
+  syncWith: 'deploy'
+phpincludes:
+  cwd: 'src/php/includes'
+  src: '*.php'
+  syncWith: 'deploy/includes'
+img:
+  cwd: 'src/img'
+  src: '**'
+  syncWith: 'deploy/img'

@@ -1,5 +1,0 @@
-options:
-  banner: '/*! Created on <%= grunt.template.today("mm-dd-yyyy") %> at <%= grunt.template.today("HH:MM") %> */'
-js_prod:
-  src: '<%= dirs.dev_js_build %>/production.js'
-  dest: '<%= dirs.dev_js_build %>/production.min.js'

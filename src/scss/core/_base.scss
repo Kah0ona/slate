@@ -1,0 +1,94 @@
+// *************************************
+//
+// Base
+// -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+html {
+  font-size: $t-fontSize;
+}
+
+body {
+  background  : $c-white;
+  color       : $c-black;
+  font-family : $t-fontFamily;
+  font-size   : 100%;
+  line-height : $t-lineHeight;
+}
+
+// -------------------------------------
+// Block Content
+// -------------------------------------
+
+p {
+  font-size: rem($t-fontSize);
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $t-headerFontFamily;
+  font-weight: bold;
+}
+
+h1, %u-textH1 {
+  font-size: rem(40px);
+}
+
+h2, %u-textH2 {
+  font-size: rem(35px);
+}
+
+h3, %u-textH3 {
+  font-size: rem(30px);
+}
+
+h4, %u-textH4 {
+  font-size: rem(25px);
+}
+
+h5, %u-textH5 {
+  font-size: rem(20px);
+}
+
+h6, %u-textH6 {
+  font-size: rem(16px);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// -------------------------------------
+// Inline Content
+// -------------------------------------
+
+a {
+  color: $c-blue;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 75%;
+}
+
+// -------------------------------------
+// Inline Block Content
+// -------------------------------------
+
+img {
+  max-width: 100%;
+}

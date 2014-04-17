@@ -1,0 +1,7 @@
+init:
+  - 'mkdir:init'
+  - 'exec:bower'
+  - 'copy:bower'
+  - 'clean:bower'
+develop:
+  - 'watch'

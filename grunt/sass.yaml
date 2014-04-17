@@ -1,7 +1,0 @@
-options:
-  banner: '/*! Created on <%= grunt.template.today("mm-dd-yyyy") %> at <%= grunt.template.today("HH:MM") %> */'
-css_prod:
-  options:
-    style: 'compressed'
-  files:
-    '<%= dirs.dev_css_build %>/production.min.css': '<%= dirs.dev_scss %>/global.scss'

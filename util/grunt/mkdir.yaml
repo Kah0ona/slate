@@ -1,0 +1,13 @@
+init:
+  options:
+    create: 
+      - 'src/fonts'
+      - 'src/ico'
+      - 'src/img'
+      - 'lib/js'
+      - 'lib/scss'
+      - 'deploy/css'
+      - 'deploy/fonts'
+      - 'deploy/img'
+      - 'deploy/includes'
+      - 'deploy/js'

@@ -1,0 +1,1 @@
+bower: '<%= dirs.dev_bower %>'

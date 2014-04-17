@@ -1,4 +1,4 @@
-# Cache
+# Cache and installed
 .grunt/
 .sass-cache/
 node_modules/

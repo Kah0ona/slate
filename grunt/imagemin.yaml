@@ -1,6 +1,0 @@
-img_prod:
-  files:
-    - expand: true
-      cwd: '<%= dirs.dev_img_src %>/'
-      src: '**/*.{png,jpg,jpeg,gif,PNG,JPG,JPEG,GIF}'
-      dest: '<%= dirs.dev_img_build %>/'

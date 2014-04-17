@@ -1,0 +1,65 @@
+// *************************************
+//
+// Global.scss
+// -> Slate v0.1.0
+//
+// *************************************
+
+// -------------------------------------
+// Libs
+// -------------------------------------
+
+// ----- Reset ----- //
+@import "../../lib/scss/normalize/normalize";
+
+// ----- Bourbon ----- //
+@import "../../lib/scss/bourbon/bourbon";
+
+// ----- Bourbon Neat ----- //
+@import "../../lib/scss/neat/neat";
+
+// ----- Native wordpress styles ----- //
+@import "../../lib/scss/wp/wp";
+
+// ----- Override ----- //
+@import "../../lib/scss/libs-override";
+
+// -------------------------------------
+// Core
+// -------------------------------------
+
+// ----- Settings ----- //
+@import "core/settings";
+
+// ----- Helpers ----- //
+@import "core/helpers";
+
+// ----- Base ----- //
+@import "core/base";
+
+// ----- Content ----- //
+@import "core/utilities";
+
+// -------------------------------------
+// Modules
+// -------------------------------------
+
+@import "modules/article";
+
+@import "modules/button";
+
+@import "modules/equalheight";
+
+@import "modules/header";
+
+@import "modules/icon";
+
+@import "modules/logo";
+
+@import "modules/navigation";
+
+@import "modules/table";
+
+// -------------------------------------
+// Inbox
+// -------------------------------------

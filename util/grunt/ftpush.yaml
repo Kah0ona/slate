@@ -1,0 +1,14 @@
+options: 
+  exclusions:
+    - '/**/.gitkeep'
+    - '/**/.gitignore'
+  auth: 
+    host: '178.18.94.73'
+    port: 21
+    authKey: 'lokaalgevonden'
+deploy:
+  auth: '<%= ftpush.options.auth %>'
+  src: 'deploy'
+  dest: '<%= dirs.prod_theme_root %>'
+  simple: false
+  useList: true
