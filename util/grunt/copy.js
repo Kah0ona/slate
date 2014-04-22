@@ -34,7 +34,10 @@ module.exports = {
           filter: 'isFile' },
         { cwd: 'bower_components/responsive-nav',
           src: 'responsive-nav.css',
-          dest: 'lib/scss/responsive-nav/_responsive-nav.scss',
+          dest: 'lib/scss/responsive-nav/',
+          rename: function(dest, src) {
+            return dest + "_" + src.replace(/\.css$/, ".scss");
+          },
           expand: true,
           flatten: true,
           filter: 'isFile' },
