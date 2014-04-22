@@ -40,9 +40,8 @@ function navigation_walker_setup(){
 
         $hasDropdown = '';
         if($args->has_children) {
-          $hasDropdown = 'has-dropdown';
+          $hasDropdown = 'Navigation-link--dropdownTrigger';
         }
-
 
         $attributes .= ' class="Navigation-link '.$activeClass.' '.$hasDropdown.'"';
         $item_output = $args->before;
