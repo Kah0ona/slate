@@ -1,9 +1,9 @@
 <?php
-add_action( 'after_setup_theme', 'navigation_walker_setup2' );
+add_action( 'after_setup_theme', 'navigation_walker_setup' );
 
-function navigation_walker_setup2(){
+function navigation_walker_setup(){
 
-    class Slate_Walker_Nav_Menu2 extends Walker_Nav_Menu {
+    class Slate_Walker_Nav_Menu extends Walker_Nav_Menu {
       
       function start_lvl( &$output, $depth ) {
         $indent = str_repeat( "\t", $depth );
