@@ -15,6 +15,7 @@
     "bourbon": "~3.1.8",
     "neat": "~1.6.0",
     "modernizr": "~2.7.2",
-    "modularized-normalize-scss": "~3.0.0"
+    "modularized-normalize-scss": "~3.0.0",
+    "responsive-nav": "~1.0.32"
   }
 }
