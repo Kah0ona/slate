@@ -1,7 +1,7 @@
 // *************************************
 //
 //   Navigation dropdown
-//   -> Example: http://codepen.io/dr-potato/pen/zAdmj/
+//   -> Expand/collapse submenus
 //
 // *************************************
 

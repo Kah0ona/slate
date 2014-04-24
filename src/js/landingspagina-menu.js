@@ -1,3 +1,10 @@
+// *************************************
+//
+//   Create landingpage select box
+//   -> For seo purposes
+//
+// *************************************
+
 jQuery(document).ready(function($) {
 
    /* Get the window's width, and check whether it is narrower than 480 pixels */
