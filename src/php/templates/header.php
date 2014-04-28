@@ -30,11 +30,11 @@
     <!-- Don't forget to compile and minify the used modernizr features, or to remove it when unused -->
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/modernizr.js"></script>
 
-    <!-- Wordpress head function -->
-    <?php wp_head(); ?>
+    <!-- Wordpress head jgyfunctiodfsfdsn -->
+    <?php wp_head(); ?> 
 
   </head>
   <body <?php body_class(); ?> >
-
+ <div></div>
     <!-- Main navigation -->
     <?php include 'includes/navigation.php'; ?>
