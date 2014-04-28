@@ -7,15 +7,15 @@ module.exports = {
   // ----- Watch tasks ----- //
 
   scss: {
-    files: ['lib/scss/**/*.scss', 'src/scss/**/*.scss'],
+    files: ['lib/scss/**/*.scss', 'dev/scss/**/*.scss'],
     tasks: ['sass:develop', 'autoprefixer:develop', 'ftpush:deploy']
   },
   js: {
-    files: ['lib/js/**/*.js', 'src/js/*.js'],
+    files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: ['concat:develop', 'ftpush:deploy']
   },
   php: {
-    files: ['php/templates/*.php', 'php/includes/*.php'],
+    files: ['dev/php/templates/*.php', 'dev/php/includes/*.php'],
     tasks: ['delete_sync:phptemplates',
       'delete_sync:phpincludes',
       'newer:copy:php',
@@ -23,11 +23,11 @@ module.exports = {
     ]
   },
   css: {
-    files: ['src/css/style.css'],
+    files: ['dev/css/style.css'],
     tasks: ['copy:css', 'ftpush:deploy']
   },
   img: {
-    files: ['src/img/**/*'],
+    files: ['dev/img/**/*'],
     tasks: ['newer:imagemin:all', 'delete_sync:img', 'ftpush:deploy']
   },
 

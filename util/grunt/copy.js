@@ -43,24 +43,24 @@ module.exports = {
 
   init: {
     files: [{
-      cwd: 'init/php/templates',
+      cwd: 'src/php/templates',
       src: '<%= init.php.templates %>',
-      dest: 'src/php/templates',
+      dest: 'dev/php/templates',
       expand: true
     }, {
-      cwd: 'init/php/includes',
+      cwd: 'src/php/includes',
       src: '<%= init.php.includes %>',
-      dest: 'src/php/includes',
+      dest: 'dev/php/includes',
       expand: true
     }, {
-      cwd: 'init/js',
+      cwd: 'src/js',
       src: '<%= init.scripts %>',
-      dest: 'src/js',
+      dest: 'dev/js',
       expand: true
     }, {
-      cwd: 'init/css',
+      cwd: 'src/css',
       src: 'style.css',
-      dest: 'src/css',
+      dest: 'dev/css',
       expand: true
     }]
   },
@@ -69,12 +69,12 @@ module.exports = {
 
   php: {
     files: [{
-      cwd: 'src/php/templates',
+      cwd: 'dev/php/templates',
       src: '*.php',
       dest: 'deploy',
       expand: true
     }, {
-      cwd: 'src/php/includes',
+      cwd: 'dev/php/includes',
       src: '*.php',
       dest: 'deploy/includes',
       expand: true
@@ -85,7 +85,7 @@ module.exports = {
 
   css: {
     files: [{
-      cwd: 'src/css',
+      cwd: 'dev/css',
       src: 'style.css',
       dest: 'deploy',
       expand: true
