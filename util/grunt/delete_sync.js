@@ -7,24 +7,24 @@ module.exports = {
   // ----- Synchronize php templates ----- //
 
   phptemplates: {
-    cwd: 'dev/php/templates',
+    cwd: 'deploy',
     src: '*.php',
-    syncWith: 'deploy'
+    syncWith: 'dev/php/templates'
   },
 
   // ----- Synchronize php includes ----- //
 
   phpincludes: {
-    cwd: 'dev/php/includes',
+    cwd: 'deploy/includes',
     src: '*.php',
-    syncWith: 'deploy/includes'
+    syncWith: 'dev/php/includes'
   },
 
   // ----- Synchronize images ----- //
 
   img: {
-    cwd: 'dev/img',
+    cwd: 'deploy/img',
     src: '**',
-    syncWith: 'deploy/img'
+    syncWith: 'dev/img'
   }
 };
