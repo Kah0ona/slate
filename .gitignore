@@ -1,10 +1,10 @@
-# Cache and installed
+# Cache and install
 .grunt/
 .sass-cache/
 node_modules/
 bower_components/
 
-# Built
+# Build
 build/*
 deploy/*
 

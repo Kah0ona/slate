@@ -1,8 +1,0 @@
-develop:
-  options:
-    map: true
-  src: 'build/css/production.min.css'
-  dest: 'deploy/css/production.min.css'
-deploy:
-  src: 'build/css/production.min.css'
-  dest: 'deploy/css/production.min.css'

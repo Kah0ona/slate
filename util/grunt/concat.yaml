@@ -1,5 +1,0 @@
-develop:
-  src:
-    - 'lib/js/**/*.js'
-    - 'src/js/*.js'
-  dest: 'deploy/js/production.min.js'
