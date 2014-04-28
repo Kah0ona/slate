@@ -62,6 +62,16 @@ module.exports = {
       src: 'style.css',
       dest: 'dev/css',
       expand: true
+    }, {
+      cwd: 'src/scss',
+      src: '**/*.scss',
+      dest: 'dev/scss',
+      expand: true
+    }, {
+      cwd: 'src/ico',
+      src: '*.svg',
+      dest: 'dev/ico',
+      expand: true
     }]
   },
 

@@ -39,13 +39,27 @@ module.exports = function (grunt) {
 
   // ----- Grunt build ----- //
 
-  grunt.registerTask('build', 'Build child or parent files for deployment.', function(type) {
+  grunt.registerTask('build', 'Build child or parent files.', function(type) {
     if (type == null) {
       grunt.warn('Build type must be specified, like build:child or build:parent.');
     }
     if (type === 'child') {
-      grunt.warn('This will run build:child.');
-      // grunt.task.run('foo:' + n, 'bar:' + n, 'baz:' + n);
+      grunt.task.run(
+        // Compile sass
+        'sass:develop',
+        'autoprefixer:develop',
+        // Concat js
+        'concat:develop',
+        // Process php
+        'newer:copy:php',
+        'delete_sync:phptemplates',
+        'delete_sync:phpincludes',
+        // Copy Wp css
+        'copy:css',
+        // Process images
+        'newer:imagemin:all',
+        'delete_sync:img'
+      );
     }
     if (type === 'parent') {
       grunt.warn('This will run build:parent.');
