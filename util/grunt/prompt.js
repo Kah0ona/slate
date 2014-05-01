@@ -34,9 +34,21 @@ module.exports = function(grunt) {
           message: 'What is your name?'
         }, {
           // Set the name of the project
+          config: 'init.author.website',
+          type: 'input',
+          default: 'http://www.lokaalgevonden.nl',
+          message: "What is your personal website url?"
+        }, {
+          // Set the name of the project
           config: 'init.project.name',
           type: 'input',
           message: 'What is the name of your project?'
+        }, {
+          // Set the name of the project
+          config: 'init.project.website',
+          type: 'input',
+          default: 'https://github.com/Kah0ona/slate',
+          message: "What is the project's git repository url?"
         }, {
           // Select templates to be used
           config: 'init.php.templates',
