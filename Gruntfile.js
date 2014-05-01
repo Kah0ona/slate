@@ -27,7 +27,9 @@ module.exports = function (grunt) {
     'copy:init',
     'mkdir:init',
     'exec:bower',
-    'copy:bower'
+    'copy:bower',
+    'build:child',
+    'ftpush:deploy'
   ]);
 
   // ----- Grunt develop ----- //

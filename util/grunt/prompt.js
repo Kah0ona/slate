@@ -16,10 +16,10 @@ module.exports = function(grunt) {
       return { name: t, checked: false};
   });
   var includeChoices = includeFiles.map(function (t) {
-      return { name: t, checked: false};
+      return { name: t, checked: true};
   });
   var scriptChoices = scriptFiles.map(function (t) {
-      return { name: t, checked: false};
+      return { name: t, checked: true};
   });
 
   // ----- Initialization prompt ----- //
@@ -28,12 +28,12 @@ module.exports = function(grunt) {
     init: {
       options: {
         questions: [{
-          // Set the authors name
+          // Set the author's name
           config: 'init.author.name',
           type: 'input',
           message: 'What is your name?'
         }, {
-          // Set the name of the project
+          // Set the author's homepage url
           config: 'init.author.website',
           type: 'input',
           default: 'http://www.lokaalgevonden.nl',
@@ -44,11 +44,15 @@ module.exports = function(grunt) {
           type: 'input',
           message: 'What is the name of your project?'
         }, {
-          // Set the name of the project
+          // Set the project's homepage url
           config: 'init.project.website',
           type: 'input',
-          default: 'https://github.com/Kah0ona/slate',
-          message: "What is the project's git repository url?"
+          message: "What is the project repository's url?" + " " + "(For example: https://github.com/Kah0ona/slate)".green
+        }, {
+          // Set the project's clone url
+          config: 'init.project.cloneurl',
+          type: 'input',
+          message: "What is the project's git clone url?" + " " + "(For example: https://github.com/Kah0ona/slate.git)".green
         }, {
           // Select templates to be used
           config: 'init.php.templates',
