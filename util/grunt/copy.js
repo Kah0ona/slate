@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 
     // ----- Copy bower components ----- //
 
-    bower: {
+    bower_libs: {
       files: [{
         cwd: 'bower_components/jquery/dist',
         src: 'jquery.min.js',
@@ -46,17 +46,18 @@ module.exports = function (grunt) {
     init: {
       files: [{
         cwd: 'src/php/templates',
-        src: '<%= init.php.templates %>',
+        src: '<%= chosenTemplates %>',
         dest: 'dev/php/templates',
-        expand: true
+        expand: true,
+        ext: '.php'
       }, {
         cwd: 'src/php/includes',
-        src: '<%= init.php.includes %>',
+        src: '<%= chosenIncludes %>',
         dest: 'dev/php/includes',
         expand: true
       }, {
         cwd: 'src/js',
-        src: '<%= init.scripts %>',
+        src: '<%= chosenScripts %>',
         dest: 'dev/js',
         expand: true
       }, {
@@ -106,7 +107,7 @@ module.exports = function (grunt) {
 
     // ----- Copy wordpress css ----- //
 
-    css: {
+    child_css: {
       files: [{
         cwd: 'dev/css',
         src: 'style.child',

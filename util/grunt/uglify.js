@@ -10,10 +10,10 @@ module.exports = {
     banner: '/*! Created on <%= grunt.template.today("mm-dd-yyyy") %> at <%= grunt.template.today("HH:MM") %> */'
   },
 
-  // ----- Generate deploy js ----- //
+  // ----- Minify js ----- //
 
-  js: {
-    src: 'build/js/production.js',
+  all: {
+    src: 'deploy/js/production.min.js',
     dest: 'deploy/js/production.min.js'
   }
 };

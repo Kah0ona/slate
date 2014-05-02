@@ -12,24 +12,24 @@ module.exports = {
 
   // ----- Generate deploy version (compressed) ----- //
 
-  deploy: {
+  compressed: {
     options: {
       style: 'compressed'
     },
     files: {
-      'build/css/production.min.css': 'dev/scss/global.scss'
+      'deploy/css/production.min.css': 'dev/scss/global.scss'
     }
   },
 
   // ----- Generate development version (uncompressed) ----- //
 
-  develop: {
+  expanded: {
     options: {
       style: 'expanded',
       sourcemap: true
     },
     files: {
-      'build/css/production.min.css': 'dev/scss/global.scss'
+      'deploy/css/production.min.css': 'dev/scss/global.scss'
     }
   }
 };

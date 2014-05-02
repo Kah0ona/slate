@@ -21,69 +21,94 @@ module.exports = function (grunt) {
 
   // ----- Grunt init ----- //
 
-  grunt.registerTask('init', 'Initialize the development environment.', [
-    'attention:ftppass',
+  grunt.registerTask('init', 'Initialize the development environment, build and deploy initial themes.', [
+    // Show warnings
+    'attention:ftppass_reminder',
+    'attention:deletion_warning',
+    // Ask for necessary variables and process them
     'prompt:init',
+    'clean:init',
     'copy:init',
     'mkdir:init',
-    'exec:bower',
-    'copy:bower',
-    'build:child',
-    'ftpush:deploy'
+    'exec:git_set_remote',
+    'exec:git_log_remote',
+    // Install and process bower libs
+    'exec:bower_install',
+    'copy:bower_libs',
+    // Build themes and deploy them
+    // 'build:parent',
+    // 'ftpush:deploy_parent',
+    'build:child:expanded',
+    'ftpush:deploy_child'
   ]);
 
   // ----- Grunt develop ----- //
 
   grunt.registerTask('develop', 'Build child theme, watch for changes and process them.', [
-    'build:child',
-    'ftpush:deploy',
+    'build:child:expanded',
+    'ftpush:deploy_child',
     'watch'
+  ]);
+
+  // ----- Grunt deploy ----- //
+
+  grunt.registerTask('deploy', 'Deploy compressed child theme to live server.', [
+    'build:child:compressed',
+    'ftpush:deploy_child'
   ]);
 
   // ----- Grunt build ----- //
 
-  grunt.registerTask('build', 'Build child or parent files.', function(type) {
+  grunt.registerTask('build', 'Build child or parent files.', function(type, style) {
     if (type == null) {
-      grunt.warn('Build type must be specified, like build:child or build:parent.');
-    }
+      grunt.warn('Build type must be specified, either build:child or build:parent.');
+    };
+    if (type === 'child' && style == null) {
+      grunt.warn('Child build style must be specified, either build:child:compressed or build:child:expanded.');
+    };
     if (type === 'child') {
-      grunt.task.run(
-        // Compile sass
-        'sass:develop',
-        'autoprefixer:develop',
-        // Concat js
-        'concat:develop',
-        // Process php
-        'newer:copy:php',
-        'delete_sync:phptemplates',
-        'delete_sync:phpincludes',
-        // Copy Wp css
-        'copy:css',
-        // Process images
-        'newer:imagemin:all',
-        'delete_sync:img'
-      );
-    }
+      if (style === 'compressed') {
+        grunt.task.run(
+          // Compile sass
+          'sass:compressed',
+          'autoprefixer:compressed',
+          // Concat and minify js
+          'concat:all',
+          'uglify:all',
+          // Process php
+          'newer:copy:php',
+          'delete_sync:php_templates',
+          'delete_sync:php_includes',
+          // Copy Wp child css
+          'copy:child_css',
+          // Process images
+          'newer:imagemin:all',
+          'delete_sync:img'
+        );
+      };
+      if (style === 'expanded') {
+        grunt.task.run(
+          // Compile sass
+          'sass:expanded',
+          'autoprefixer:expanded',
+          // Concat js
+          'concat:all',
+          // Process php
+          'newer:copy:php',
+          'delete_sync:php_templates',
+          'delete_sync:php_includes',
+          // Copy Wp child css
+          'copy:child_css',
+          // Process images
+          'newer:imagemin:all',
+          'delete_sync:img'
+        );
+      };
+    };
     if (type === 'parent') {
       grunt.warn('This will run build:parent.');
       // grunt.task.run('foo:' + n, 'bar:' + n, 'baz:' + n);
-    }
-  });
-
-  // ----- Grunt deploy ----- //
-
-  grunt.registerTask('deploy', 'Deploy built child or parent files to live server.', function(type) {
-    if (type == null) {
-      grunt.warn('Deploy type must be specified, like deploy:child or deploy:parent.');
-    }
-    if (type === 'child') {
-      grunt.warn('This will run deploy:child.');
-      // grunt.task.run('foo:' + n, 'bar:' + n, 'baz:' + n);
-    }
-    if (type === 'parent') {
-      grunt.warn('This will run deploy:parent.');
-      // grunt.task.run('foo:' + n, 'bar:' + n, 'baz:' + n);
-    }
+    };
   });
 
 };

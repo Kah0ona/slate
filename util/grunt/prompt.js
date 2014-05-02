@@ -29,45 +29,45 @@ module.exports = function(grunt) {
       options: {
         questions: [{
           // Set the author's name
-          config: 'init.author.name',
+          config: 'authorName',
           type: 'input',
           message: 'What is your name?'
         }, {
           // Set the author's homepage url
-          config: 'init.author.website',
+          config: 'authorWebsite',
           type: 'input',
           default: 'http://www.lokaalgevonden.nl',
           message: "What is your personal website url?"
         }, {
           // Set the name of the project
-          config: 'init.project.name',
+          config: 'projectName',
           type: 'input',
           message: 'What is the name of your project?'
         }, {
           // Set the project's homepage url
-          config: 'init.project.website',
+          config: 'projectWebsite',
           type: 'input',
-          message: "What is the project repository's url?" + " " + "(For example: https://github.com/Kah0ona/slate)".green
+          message: "What is the project repository's url?" + " " + "(For example: https://github.com/yourName/repoName)".green
         }, {
           // Set the project's clone url
-          config: 'init.project.cloneurl',
+          config: 'projectCloneUrl',
           type: 'input',
-          message: "What is the project's git clone url?" + " " + "(For example: https://github.com/Kah0ona/slate.git)".green
+          message: "What is the project's git clone url?" + " " + "(For example: https://github.com/yourName/repoName.git)".green
         }, {
           // Select templates to be used
-          config: 'init.php.templates',
+          config: 'chosenTemplates',
           type: 'checkbox',
           message: 'Which templates do you want to use?',
           choices: templateChoices
         }, {
           // Select includes to be used
-          config: 'init.php.includes',
+          config: 'chosenIncludes',
           type: 'checkbox',
           message: 'Which includes do you want to use?',
           choices: includeChoices
         }, {
           // Select scripts to be used
-          config: 'init.scripts',
+          config: 'chosenScripts',
           type: 'checkbox',
           message: 'Which scripts do you want to use?',
           choices: scriptChoices

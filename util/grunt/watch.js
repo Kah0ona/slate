@@ -9,32 +9,32 @@ module.exports = {
   scss: {
     files: ['lib/scss/**/*.scss', 'dev/scss/**/*.scss'],
     tasks: [
-      'sass:develop',
-      'autoprefixer:develop',
-      'ftpush:deploy'
+      'sass:expanded',
+      'autoprefixer:expanded',
+      'ftpush:deploy_child'
     ]
   },
   js: {
     files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: [
-      'concat:develop',
-      'ftpush:deploy'
+      'concat:all',
+      'ftpush:deploy_child'
     ]
   },
   php: {
     files: ['dev/php/templates/*.php', 'dev/php/includes/*.php'],
     tasks: [
       'newer:copy:php',
-      'delete_sync:phptemplates',
-      'delete_sync:phpincludes',
-      'ftpush:deploy'
+      'delete_sync:php_templates',
+      'delete_sync:php_includes',
+      'ftpush:deploy_child'
     ]
   },
   css: {
-    files: ['dev/css/style.css'],
+    files: ['dev/css/style.child'],
     tasks: [
-      'copy:css',
-      'ftpush:deploy'
+      'copy:child_css',
+      'ftpush:deploy_child'
     ]
   },
   img: {
@@ -42,7 +42,7 @@ module.exports = {
     tasks: [
       'newer:imagemin:all',
       'delete_sync:img',
-      'ftpush:deploy'
+      'ftpush:deploy_child'
     ]
   },
 

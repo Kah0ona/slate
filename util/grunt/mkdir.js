@@ -8,7 +8,8 @@ module.exports = {
 
   init: {
     options: {
-      create: ['dev/fonts',
+      create: [
+        'dev/fonts',
         'dev/ico',
         'dev/img',
         'lib/js',

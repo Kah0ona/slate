@@ -1,10 +1,10 @@
 /*
-Theme Name: Slate - <%= init.project.name %>
-Theme URI: <%= init.project.website %>
-Description: A Clean Slate - <%= init.project.name %> Child Theme
+Theme Name: Slate - <%= projectName %>
+Theme URI: <%= projectWebsite %>
+Description: A Clean Slate - <%= projectName %> Child Theme
 Version: 1.0
-Author: <%= init.author.name %>
-Author URI: <%= init.author.website %>
+Author: <%= authorName %>
+Author URI: <%= authorWebsite %>
 Tags: Slate
 Template: slate
 */

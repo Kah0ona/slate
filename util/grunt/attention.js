@@ -6,9 +6,19 @@ module.exports = {
 
   // ----- Ftppass reminder ----- //  
 
-  ftppass: {
+  ftppass_reminder: {
     options: {
-      message: "Don't forget to copy .ftppass to your local project folder before continuing with the init!",
+      message: "Reminder: .ftppass must be present in the root of your local project folder.",
+      border: 'double',
+      borderColor: 'green'
+    }
+  },
+
+  // ----- Warning for file removal in dev folder ----- //
+
+  deletion_warning: {
+    options: {
+      message: "Warning: any previously made changes to this project will be overwritten!",
       border: 'double',
       borderColor: 'red'
     }

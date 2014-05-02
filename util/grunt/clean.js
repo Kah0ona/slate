@@ -4,7 +4,14 @@
 
 module.exports = {
 
-  // ----- Clean build dir ----- //
+  // ----- Clean up for initialization ----- //
 
-  build: ['build']
+  init: [
+    '.grunt',
+    '.sass-cache',
+    'bower_components',
+    'build',
+    'deploy',
+    'dev'
+  ]
 };
