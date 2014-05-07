@@ -11,7 +11,7 @@ module.exports = {
       expand: true,
       cwd: 'dev/img',
       src: '*.{png,jpg,gif}',
-      dest: 'deploy/img'
+      dest: 'deploy/child/img'
     }]
   }
 };

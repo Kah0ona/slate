@@ -17,7 +17,7 @@ module.exports = {
       style: 'compressed'
     },
     files: {
-      'deploy/css/production.min.css': 'dev/scss/global.scss'
+      'deploy/child/css/production.min.css': 'dev/scss/global.scss'
     }
   },
 
@@ -29,7 +29,7 @@ module.exports = {
       sourcemap: true
     },
     files: {
-      'deploy/css/production.min.css': 'dev/scss/global.scss'
+      'deploy/child/css/production.min.css': 'dev/scss/global.scss'
     }
   }
 };

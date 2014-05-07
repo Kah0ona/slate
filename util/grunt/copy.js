@@ -12,14 +12,14 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'bower_components/jquery/dist',
         src: 'jquery.min.js',
-        dest: 'deploy/js/standalone',
+        dest: 'deploy/child/js/standalone',
         expand: true,
         flatten: true,
         filter: 'isFile'
       }, {
         cwd: 'bower_components/modernizr',
         src: 'modernizr.js',
-        dest: 'deploy/js/standalone',
+        dest: 'deploy/child/js/standalone',
         expand: true,
         flatten: true,
         filter: 'isFile'
@@ -68,9 +68,10 @@ module.exports = function (grunt) {
         ext: '.child'
       }, {
         cwd: 'src/css',
-        src: 'style.parent',
+        src: 'style.parent.tpl',
         dest: 'dev/css',
-        expand: true
+        expand: true,
+        ext: '.parent'
       }, {
         cwd: 'src/scss',
         src: '**/*.scss',
@@ -91,30 +92,41 @@ module.exports = function (grunt) {
 
     // ----- Copy php files ----- //
 
-    php: {
+    php_child: {
       files: [{
         cwd: 'dev/php/templates',
         src: '*.php',
-        dest: 'deploy',
+        dest: 'deploy/child',
         expand: true
       }, {
         cwd: 'dev/php/includes',
         src: '*.php',
-        dest: 'deploy/includes',
+        dest: 'deploy/child/includes',
         expand: true
       }]
     },
 
     // ----- Copy wordpress css ----- //
 
-    child_css: {
+    css_child: {
       files: [{
         cwd: 'dev/css',
         src: 'style.child',
-        dest: 'deploy',
+        dest: 'deploy/child',
+        expand: true,
+        ext: '.css'
+      }]
+    },
+
+    css_parent: {
+      files: [{
+        cwd: 'dev/css',
+        src: 'style.parent',
+        dest: 'deploy/parent',
         expand: true,
         ext: '.css'
       }]
     }
+
   }
 };

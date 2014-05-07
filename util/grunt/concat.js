@@ -8,6 +8,6 @@ module.exports = {
 
   all: {
     src: ['lib/js/**/*.js', 'dev/js/*.js'],
-    dest: 'deploy/js/production.min.js'
+    dest: 'deploy/child/js/production.min.js'
   }
 };

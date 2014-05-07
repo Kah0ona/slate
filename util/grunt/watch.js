@@ -24,7 +24,7 @@ module.exports = {
   php: {
     files: ['dev/php/templates/*.php', 'dev/php/includes/*.php'],
     tasks: [
-      'newer:copy:php',
+      'newer:copy:php_child',
       'delete_sync:php_templates',
       'delete_sync:php_includes',
       'ftpush:deploy_child'
@@ -33,7 +33,7 @@ module.exports = {
   css: {
     files: ['dev/css/style.child'],
     tasks: [
-      'copy:child_css',
+      'copy:css_child',
       'ftpush:deploy_child'
     ]
   },
@@ -52,6 +52,6 @@ module.exports = {
     options: {
       livereload: true
     },
-    files: ['deploy/**/*']
+    files: ['deploy/child/**/*']
   }
 };

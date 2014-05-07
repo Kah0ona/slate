@@ -1,8 +1,8 @@
 {
-  "name": "slate_bower_dependencies",
+  "name": "Slate",
   "version": "0.1.0",
   "authors": [
-    "Ismay <ismay@ismaywolff.nl>"
+    "Ismay <ismay@lokaalgevonden.nl>"
   ],
   "description": "Bower dependencies for the Slate theme",
   "keywords": [

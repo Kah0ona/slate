@@ -30,6 +30,8 @@ module.exports = function (grunt) {
     'clean:init',
     'copy:init',
     'mkdir:init',
+    'json-replace:init_npm',
+    'json-replace:init_bower'
     'exec:git_set_remote',
     'exec:git_log_remote',
     // Install and process bower libs
@@ -76,11 +78,11 @@ module.exports = function (grunt) {
           'concat:all',
           'uglify:all',
           // Process php
-          'newer:copy:php',
+          'newer:copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
           // Copy Wp child css
-          'copy:child_css',
+          'copy:css_child',
           // Process images
           'newer:imagemin:all',
           'delete_sync:img'
@@ -94,11 +96,11 @@ module.exports = function (grunt) {
           // Concat js
           'concat:all',
           // Process php
-          'newer:copy:php',
+          'newer:copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
           // Copy Wp child css
-          'copy:child_css',
+          'copy:css_child',
           // Process images
           'newer:imagemin:all',
           'delete_sync:img'

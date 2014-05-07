@@ -12,11 +12,11 @@ module.exports = {
       port: 21,
       authKey: 'lokaalgevonden'
     },
-    src: 'deploy',
-    dest: '/wp-content/themes/slate',
+    src: 'deploy/child',
+    dest: '/wp-content/themes/slate-<%= package.version %>_<%= package.name %>',
     simple: true,
     useList: false
-  }
+  },
 
   // ----- Mirror parent theme to server ----- //
 
@@ -26,8 +26,8 @@ module.exports = {
       port: 21,
       authKey: 'lokaalgevonden'
     },
-    src: 'deploy',
-    dest: '/wp-content/themes/slate',
+    src: 'deploy/parent',
+    dest: '/wp-content/themes/slate-<%= package.version %>',
     simple: true,
     useList: false
   }

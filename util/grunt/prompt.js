@@ -38,6 +38,11 @@ module.exports = function(grunt) {
           type: 'input',
           default: 'http://www.lokaalgevonden.nl',
           message: "What is your personal website url?"
+        }, {          
+          // Set the author's homepage url
+          config: 'authorMail',
+          type: 'input',
+          message: "What is your email address?"
         }, {
           // Set the name of the project
           config: 'projectName',
