@@ -52,5 +52,25 @@ The following dependencies need to be installed on your system before deploying 
 
 ### 4. Checklist
 
-* Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding [html5shiv.js](https://code.google.com/p/html5shiv/) and removing the .no-js class from the html element if you're not using modernizr.
-* Load (only) the fonts you're using
+#####Code
+
+[ ] Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding [html5shiv.js](https://code.google.com/p/html5shiv/) and removing the .no-js class from the html element if you're not using modernizr.
+[ ] Load (only) the fonts you're using (check the domain if you're using [typekit](http://www.typekit.com))
+[ ] Add a google analytics snippet
+
+#####Structure
+
+[ ] Create a contact page with a contactform and test it
+[ ] Add a map to the contact page (google maps: [here](https://www.google.com/maps?output=classic))
+[ ] Generate the favicons
+[ ] Create a footer menu and add the landingpages to it
+[ ] Add the customers' contact details to the footer
+[ ] Create a site signature in footer.php (copyright & built by ...)
+[ ] Create an app page
+
+#####Final checks
+
+[ ] Check the website in all screensizes and on the relevant browsers (with [browserstack.com](http://www.browserstack.com/))
+[ ] Go through all the pages, check the links, effects and content
+[ ] Call the customer and ask them if they're satisfied
+[ ] Add the live domain (through `settings` -> `domains` )
