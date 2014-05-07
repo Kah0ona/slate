@@ -1,11 +1,11 @@
 /*
-Theme Name: Slate-<%= package.version %>_<%= projectName %>
+Theme Name: slate-<%= package.version %>_<%= projectName %>
 Theme URI: <%= projectWebsite %>
-Description: A Clean Slate - <%= projectName %> Child Theme
+Description: a clean slate - <%= projectName %> child theme
 Version: 1.0
 Author: <%= authorName %>
 Author URI: <%= authorWebsite %>
-Tags: Slate
+Tags: slate
 Template: slate-<%= package.version %>
 */
 
