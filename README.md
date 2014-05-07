@@ -1,7 +1,9 @@
 Slate
 =====
 
-###Dependencies
+Slate is a framework for Wordpress child theme development.
+
+### 1. Dependencies
 
 The following dependencies need to be installed on your system before deploying the framework.
 
@@ -11,9 +13,9 @@ The following dependencies need to be installed on your system before deploying 
 * Sass: [http://sass-lang.com/](http://sass-lang.com/)
 * Grunt Cli: [http://gruntjs.com/](http://gruntjs.com/)
 * Bower: [http://bower.io/](http://bower.io/)
-* Local Wordpress install, recommended: [https://bitnami.com/stack/wordpress](https://bitnami.com/stack/wordpress)
+* A local Wordpress install is optional
 
-###Getting Started
+### 2. Getting Started
 
 #####Git
 
@@ -36,7 +38,7 @@ The following dependencies need to be installed on your system before deploying 
 * `Network enable` your child theme
 * Apply the child theme to the new wordpress site
 
-###What we're using
+### 3. What we're using
 
 * HTML version: [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
 * HTML svg: [use svg for vector based images](http://css-tricks.com/using-svg/) and [icons](http://css-tricks.com/svg-sprites-use-better-icon-fonts/)
@@ -48,19 +50,7 @@ The following dependencies need to be installed on your system before deploying 
 * CSS margins: [declare only in one direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 * Sass color variable naming: [Ben Smithetts approach](http://bensmithett.com/stop-using-so-many-sass-variables/)
 
-###Useful Resources
-
-* Icomoon.io for free svg iconfonts
-* The [MVCSS Library](https://github.com/mvcss/library) and the [Suitcss library](https://github.com/suitcss)
-* [Cycle2](http://jquery.malsup.com/cycle2/) for a slider
-* [Isotope](http://isotope.metafizzy.co/) for sorting
-* [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) for a lightbox
-
-###Checklist
+### 4. Pre deploy checklist
 
 * Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding [html5shiv.js](https://code.google.com/p/html5shiv/) and removing the .no-js class from the html element if you're not using modernizr.
 * Load (only) the fonts you're using
-
-###Suggestions
-
-* Use [respond.js](https://github.com/scottjehl/Respond) for IE8 and below media query functionality

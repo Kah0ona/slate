@@ -55,12 +55,12 @@ module.exports = function(grunt) {
           // Set the project's homepage url
           config: 'projectWebsite',
           type: 'input',
-          message: "What is the project repository's url?" + " " + "(For example: https://github.com/yourName/repoName)".green
+          message: "What is the project repository's website url?" + " " + "(For example: https://github.com/yourName/repoName)".green
         }, {
           // Set the project's clone url
           config: 'projectCloneUrl',
           type: 'input',
-          message: "What is the project's git clone url?" + " " + "(For example: https://github.com/yourName/repoName.git)".green
+          message: "What is the project repository's clone url?" + " " + "(For example: https://github.com/yourName/repoName.git)".green
         }, {
           // Select templates to be used
           config: 'chosenTemplates',
