@@ -24,6 +24,13 @@ module.exports = function (grunt) {
         flatten: true,
         filter: 'isFile'
       }, {
+        cwd: 'bower_components/livereload/dist',
+        src: 'livereload.js',
+        dest: 'deploy/child/js/standalone',
+        expand: true,
+        flatten: true,
+        filter: 'isFile'
+      }, {
         cwd: 'bower_components/bourbon/app/assets/stylesheets',
         src: '**',
         dest: 'lib/scss/bourbon',

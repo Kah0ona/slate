@@ -94,6 +94,8 @@ module.exports = function (grunt) {
           // Compile sass
           'sass:expanded',
           'autoprefixer:expanded',
+          // Make sure all bower libs are present
+          'newer:copy:bower_libs',
           // Concat js
           'concat:all',
           // Process php

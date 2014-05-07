@@ -8,6 +8,9 @@
 	<!-- Footer javascript below here -->
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/production.min.js"></script>
 
+  <!-- Livereload (remove in production!) -->
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/livereload.js"></script>
+
   <!-- Check if javascript for threaded comments should be loaded -->
   <?php include 'includes/comment-check.php'; ?>
 
