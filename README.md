@@ -38,7 +38,7 @@ The following dependencies need to be installed on your system before deploying 
 * `Network enable` your child theme
 * Apply the child theme to the new wordpress site
 
-### 3. What we're using
+### 3. Styleguide & best practices
 
 * HTML version: [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
 * HTML svg: [use svg for vector based images](http://css-tricks.com/using-svg/) and [icons](http://css-tricks.com/svg-sprites-use-better-icon-fonts/)
@@ -50,7 +50,7 @@ The following dependencies need to be installed on your system before deploying 
 * CSS margins: [declare only in one direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 * Sass color variable naming: [Ben Smithetts approach](http://bensmithett.com/stop-using-so-many-sass-variables/)
 
-### 4. Pre deploy checklist
+### 4. Checklist
 
 * Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding [html5shiv.js](https://code.google.com/p/html5shiv/) and removing the .no-js class from the html element if you're not using modernizr.
 * Load (only) the fonts you're using
