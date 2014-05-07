@@ -47,7 +47,10 @@ module.exports = function(grunt) {
           // Set the name of the project
           config: 'projectName',
           type: 'input',
-          message: 'What is the name of your project?'
+          message: 'What is the name of your project?',
+          filter: function(slugString) {
+            return slugString.replace(/ /g, '-').replace(/\./, '-').toLowerCase();
+          }
         }, {
           // Set the project's homepage url
           config: 'projectWebsite',
