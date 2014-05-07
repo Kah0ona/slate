@@ -38,17 +38,29 @@ The following dependencies need to be installed on your system before deploying 
 * `Network enable` your child theme
 * Apply the child theme to the new wordpress site
 
-### 3. Styleguide & best practices
+### 3. Documentation
 
-* HTML version: [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
-* HTML svg: [use svg for vector based images](http://css-tricks.com/using-svg/) and [icons](http://css-tricks.com/svg-sprites-use-better-icon-fonts/)
+#####Styleguides
+
 * CSS and HTML structure: [MVCSS](http://mvcss.github.io/) for structure and [Suitcss](https://github.com/suitcss) by [Nicolas Gallagher](https://github.com/necolas/idiomatic-css) for [naming](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) [classes](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
-* CSS box-sizing: [box-sizing:border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
-* CSS sizing: [everything in rem](http://mvcss.github.io/core/helpers/)
-* CSS media queries: [media queries in em](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/)
-* CSS images: [fluid images](http://alistapart.com/article/fluid-images)
-* CSS margins: [declare only in one direction](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 * Sass color variable naming: [Ben Smithetts approach](http://bensmithett.com/stop-using-so-many-sass-variables/)
+
+#####Best practices
+
+* [Declare css margins in one direction only](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
+* [Use svg for vector based images](http://css-tricks.com/using-svg/) and [icons](http://css-tricks.com/svg-sprites-use-better-icon-fonts/)
+* [Use box-sizing:border-box on all elements](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+* [Do your css sizing in rem]()
+* [Css media queries in em](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/)
+* [All images should be fluid images](http://alistapart.com/article/fluid-images)
+
+#####Used technology, libraries, languages
+
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
+* [HTML5 Boilerplate](http://html5boilerplate.com/)
+* [Bourbon and Bourbon Neat](http://bourbon.io/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+* [Modernizr](http://modernizr.com/)
 
 ### 4. Checklist
 
