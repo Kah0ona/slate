@@ -79,13 +79,13 @@ module.exports = function (grunt) {
           'concat:all',
           'uglify:all',
           // Process php
-          'newer:copy:php_child',
+          'copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
           // Copy Wp child css
           'copy:css_child',
           // Process images
-          'newer:imagemin:all',
+          'imagemin:all',
           'delete_sync:img'
         );
       };
