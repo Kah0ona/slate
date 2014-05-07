@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     // 'build:parent',
     // 'ftpush:deploy_parent',
     'build:child:expanded',
-    'ftpush:deploy_child'
+    'ftpush:init_deploy_child'
   ]);
 
   // ----- Grunt develop ----- //
