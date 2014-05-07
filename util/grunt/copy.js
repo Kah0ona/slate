@@ -106,6 +106,21 @@ module.exports = function (grunt) {
       }]
     },
 
+    php_parent: {
+      files: [{
+        cwd: 'src/php/templates',
+        src: ['*.php','*.parent'],
+        dest: 'deploy/parent',
+        expand: true,
+        ext: '.php'
+      }, {
+        cwd: 'dev/php/includes',
+        src: '*.php',
+        dest: 'deploy/parent/includes',
+        expand: true
+      }]
+    },
+
     // ----- Copy wordpress css ----- //
 
     css_child: {

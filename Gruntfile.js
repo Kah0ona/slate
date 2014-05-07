@@ -38,8 +38,8 @@ module.exports = function (grunt) {
     'exec:bower_install',
     'copy:bower_libs',
     // Build themes and deploy them
-    // 'build:parent',
-    // 'ftpush:deploy_parent',
+    'build:parent',
+    'ftpush:deploy_parent',
     'build:child:expanded',
     'ftpush:init_deploy_child'
   ]);
@@ -55,6 +55,7 @@ module.exports = function (grunt) {
   // ----- Grunt deploy ----- //
 
   grunt.registerTask('deploy', 'Deploy compressed child theme to live server.', [
+    'clean:child',
     'build:child:compressed',
     'ftpush:deploy_child'
   ]);
@@ -108,8 +109,12 @@ module.exports = function (grunt) {
       };
     };
     if (type === 'parent') {
-      grunt.warn('This will run build:parent.');
-      // grunt.task.run('foo:' + n, 'bar:' + n, 'baz:' + n);
+      grunt.task.run(
+        // Copy parent php
+        'copy:php_parent',
+        // Copy parent style.css
+        'copy:css_parent'
+      );
     };
   });
 

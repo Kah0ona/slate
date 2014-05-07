@@ -13,5 +13,11 @@ module.exports = {
     'build',
     'deploy',
     'dev'
+  ],
+  
+  // ----- Clean child folder for deploy ----- //
+
+  child: [
+    'deploy/child'
   ]
 };
