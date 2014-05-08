@@ -17,8 +17,8 @@ $(document).ready(function() {
         $(this).children('.Navigation-list--dropdown').removeClass('is-hidden'); 
       } else {
         $(".Navigation-list--dropdown").addClass('is-hidden');         
-      }          
-    });
+      }
+    }).children('a').click(function(e){e.preventDefault();});
   $('.Navigation-listItem .Navigation-list--dropdown').click(function(e) {
     e.stopPropagation();
   });
