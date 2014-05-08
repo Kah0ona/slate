@@ -3,7 +3,8 @@ Slate
 
 Slate is a framework for Wordpress child theme development.
 
-### 1. Dependencies
+1. Dependencies
+---------------
 
 The following dependencies need to be installed on your system before deploying the framework.
 
@@ -15,7 +16,8 @@ The following dependencies need to be installed on your system before deploying 
 * Bower: [http://bower.io/](http://bower.io/)
 * A local Wordpress install is optional
 
-### 2. Getting Started
+2. Getting Started
+------------------
 
 #####Git
 
@@ -42,7 +44,8 @@ The following dependencies need to be installed on your system before deploying 
 
 * Create a new sublime project and add the snippets and settings from `util/sublime` to your project
 
-### 3. Documentation
+3. Documentation
+----------------
 
 #####Styleguides
 
@@ -67,7 +70,8 @@ The following dependencies need to be installed on your system before deploying 
 * [Normalize.css](https://necolas.github.io/normalize.css/)
 * [Modernizr](http://modernizr.com/)
 
-### 4. Checklist
+4. Checklist
+------------
 
 #####Code
 
