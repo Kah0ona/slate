@@ -38,6 +38,10 @@ The following dependencies need to be installed on your system before deploying 
 * `Network enable` your child theme
 * Apply the child theme to the new wordpress site
 
+#####Optional
+
+* Create a new sublime project and add the snippets and settings from `util/sublime` to your project
+
 ### 3. Documentation
 
 #####Styleguides
