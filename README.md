@@ -44,6 +44,7 @@ The following dependencies need to be installed on your system before deploying 
 
 * CSS and HTML structure: [MVCSS](http://mvcss.github.io/) for structure and [Suitcss](https://github.com/suitcss) by [Nicolas Gallagher](https://github.com/necolas/idiomatic-css) for [naming](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) [classes](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
 * Sass color variable naming: [Ben Smithetts approach](http://bensmithett.com/stop-using-so-many-sass-variables/)
+* In general: [Google web fundamentals](https://developers.google.com/web/fundamentals/)
 
 #####Best practices
 
