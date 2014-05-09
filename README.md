@@ -76,7 +76,7 @@ The following dependencies need to be installed on your system before deploying 
 #####Code
 
 - [ ] Replace modernizr.js with a built and minified version, or remove it when you're not using it (don't forget to remove the link from header.php as well). Consider adding [html5shiv.js](https://code.google.com/p/html5shiv/) and removing the .no-js class from the html element if you're not using modernizr
-- [ ] Remove livereload.js from footer.php
+- [ ] Remove the livereload script from footer.php
 - [ ] Load (only) the fonts you're using (check the domain if you're using [typekit](http://www.typekit.com))
 - [ ] Add a google analytics snippet
 

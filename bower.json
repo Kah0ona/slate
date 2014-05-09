@@ -17,7 +17,6 @@
     "modularized-normalize-scss": "~3.0.0"
   },
   "devDependencies": {
-    "modernizr": "~2.7.2",
-    "livereload": "~2.0.8"
+    "modernizr": "~2.7.2"
   }
 }
