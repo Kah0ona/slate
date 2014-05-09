@@ -10,14 +10,14 @@ module.exports = {
     options: {
       map: true
     },
-    src: 'deploy/child/css/production.min.css',
-    dest: 'deploy/child/css/production.min.css'
+    src: 'dist/child/css/production.min.css',
+    dest: 'dist/child/css/production.min.css'
   },
 
   // ----- Deploy (without sourcemap) ----- //
 
   compressed: {
-    src: 'deploy/child/css/production.min.css',
-    dest: 'deploy/child/css/production.min.css'
+    src: 'dist/child/css/production.min.css',
+    dest: 'dist/child/css/production.min.css'
   }
 };

@@ -14,11 +14,11 @@ module.exports = {
         'dev/img',
         'lib/js',
         'lib/scss',
-        'deploy/child/css',
-        'deploy/child/fonts',
-        'deploy/child/img',
-        'deploy/child/includes',
-        'deploy/child/js'
+        'dist/child/css',
+        'dist/child/fonts',
+        'dist/child/img',
+        'dist/child/includes',
+        'dist/child/js'
       ]
     }
   }

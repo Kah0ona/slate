@@ -12,7 +12,7 @@ module.exports = {
       port: 21,
       authKey: 'lokaalgevonden'
     },
-    src: 'deploy/child',
+    src: 'dist/child',
     dest: '/wp-content/themes/slate-<%= package.version %>_<%= projectName %>',
     simple: true,
     useList: false
@@ -24,7 +24,7 @@ module.exports = {
       port: 21,
       authKey: 'lokaalgevonden'
     },
-    src: 'deploy/child',
+    src: 'dist/child',
     dest: '/wp-content/themes/slate-<%= package.version %>_<%= package.name %>',
     simple: true,
     useList: false
@@ -38,7 +38,7 @@ module.exports = {
       port: 21,
       authKey: 'lokaalgevonden'
     },
-    src: 'deploy/parent',
+    src: 'dist/parent',
     dest: '/wp-content/themes/slate-<%= package.version %>',
     simple: true,
     useList: false

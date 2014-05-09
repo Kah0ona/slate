@@ -12,14 +12,14 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'bower_components/jquery/dist',
         src: 'jquery.min.js',
-        dest: 'deploy/child/js/standalone',
+        dest: 'dist/child/js/standalone',
         expand: true,
         flatten: true,
         filter: 'isFile'
       }, {
         cwd: 'bower_components/modernizr',
         src: 'modernizr.js',
-        dest: 'deploy/child/js/standalone',
+        dest: 'dist/child/js/standalone',
         expand: true,
         flatten: true,
         filter: 'isFile'
@@ -96,12 +96,12 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'dev/php/templates',
         src: '*.php',
-        dest: 'deploy/child',
+        dest: 'dist/child',
         expand: true
       }, {
         cwd: 'dev/php/includes',
         src: '*.php',
-        dest: 'deploy/child/includes',
+        dest: 'dist/child/includes',
         expand: true
       }]
     },
@@ -110,13 +110,13 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'src/php/templates',
         src: ['*.php','*.parent'],
-        dest: 'deploy/parent',
+        dest: 'dist/parent',
         expand: true,
         ext: '.php'
       }, {
         cwd: 'dev/php/includes',
         src: '*.php',
-        dest: 'deploy/parent/includes',
+        dest: 'dist/parent/includes',
         expand: true
       }]
     },
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'dev/css',
         src: 'style.child',
-        dest: 'deploy/child',
+        dest: 'dist/child',
         expand: true,
         ext: '.css'
       }]
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
       files: [{
         cwd: 'dev/css',
         src: 'style.parent',
-        dest: 'deploy/parent',
+        dest: 'dist/parent',
         expand: true,
         ext: '.css'
       }]

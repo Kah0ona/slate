@@ -7,7 +7,7 @@ module.exports = {
   // ----- Synchronize php templates ----- //
 
   php_templates: {
-    cwd: 'deploy/child',
+    cwd: 'dist/child',
     src: '*.php',
     syncWith: 'dev/php/templates'
   },
@@ -15,7 +15,7 @@ module.exports = {
   // ----- Synchronize php includes ----- //
 
   php_includes: {
-    cwd: 'deploy/child/includes',
+    cwd: 'dist/child/includes',
     src: '*.php',
     syncWith: 'dev/php/includes'
   },
@@ -23,7 +23,7 @@ module.exports = {
   // ----- Synchronize images ----- //
 
   img: {
-    cwd: 'deploy/child/img',
+    cwd: 'dist/child/img',
     src: '**',
     syncWith: 'dev/img'
   }

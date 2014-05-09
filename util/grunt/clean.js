@@ -11,13 +11,13 @@ module.exports = {
     '.sass-cache',
     'bower_components',
     'build',
-    'deploy',
+    'dist',
     'dev'
   ],
   
   // ----- Clean child folder for deploy ----- //
 
   child: [
-    'deploy/child'
+    'dist/child'
   ]
 };
