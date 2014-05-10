@@ -52,6 +52,6 @@ module.exports = {
     options: {
       livereload: true
     },
-    files: ['deploy/child/**/*']
+    files: ['dist/child/**/*']
   }
 };
