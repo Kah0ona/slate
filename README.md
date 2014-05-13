@@ -35,10 +35,10 @@ The following dependencies need to be installed on your system before deploying 
 
 #####Wordpress
 
-* `Network enable` your parent theme (if not enabled already)
 * Create a new wordpress site
+* `Network enable` your parent theme (if not enabled already)
 * `Network enable` your child theme
-* Apply the child theme to the new wordpress site
+* Apply the child theme to the new wordpress site (the theme will be called `slate-[current version]_[project name]`)
 
 #####Optional
 
