@@ -1,5 +1,5 @@
 <?php
-  // Register the main navigation
+  // Register the sitemap menu
   add_action( 'init', 'register_menu_sitemap' );
 
   function register_menu_sitemap(){
