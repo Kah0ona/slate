@@ -79,6 +79,7 @@ The following dependencies need to be installed on your system before deploying 
 - [ ] Remove the livereload script from footer.php
 - [ ] Load (only) the fonts you're using (check the domain if you're using [typekit](http://www.typekit.com))
 - [ ] Add a google analytics snippet
+- [ ] Map the domain to name.lokaalgevonden.nl (under `Settings -> Domains`)
 
 #####Structure
 
