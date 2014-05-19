@@ -4,11 +4,11 @@ add_action( 'after_setup_theme', 'navigation_walker_setup' );
 function navigation_walker_setup(){
 
     class Slate_Walker_Nav_Menu extends Walker_Nav_Menu {
-      
+
       function start_lvl( &$output, $depth ) {
         $indent = str_repeat( "\t", $depth );
-        $output    .= "\n$indent<ul class='Navigation-list Navigation-list--dropdown is-hidden'>\n";
-        
+        $output .= "\n$indent<ul class='Navigation-list Navigation-list--dropdown is-hidden'>\n";
+
       }
 
       function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
@@ -18,23 +18,20 @@ function navigation_walker_setup(){
         $li_attributes = '';
         $class_names = $value = '';
 
-        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $classes = array();
         $classes[] = ($args->has_children) ? 'Navigation-listItem--hasDropdown' : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
         $classes[] = 'Navigation-listItem';
-      
+
         $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
         $class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-        $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-        $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
+        $output .= $indent . '<li' . $value . $class_names . $li_attributes . '>';
 
-        $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
-
-        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        $attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+        $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+        $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
 
         $activeClass = ($item->current || $item->current_item_ancestor) ? 'is-active' : '';
 
@@ -57,14 +54,14 @@ function navigation_walker_setup(){
 
         if ( !$element )
           return;
-        
+
         $id_field = $this->db_fields['id'];
 
         //display this element
-        if ( is_array( $args[0] ) ) 
+        if ( is_array( $args[0] ) )
           $args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-        else if ( is_object( $args[0] ) ) 
-          $args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+        else if ( is_object( $args[0] ) )
+          $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
         $cb_args = array_merge( array(&$output, $element, $depth), $args);
         call_user_func_array(array(&$this, 'start_el'), $cb_args);
 
@@ -95,9 +92,9 @@ function navigation_walker_setup(){
         //end this element
         $cb_args = array_merge( array(&$output, $element, $depth), $args);
         call_user_func_array(array(&$this, 'end_el'), $cb_args);
-        
+
       }
-      
+
     }
 
 }
