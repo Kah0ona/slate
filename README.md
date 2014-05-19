@@ -9,7 +9,7 @@ Slate is a framework for Wordpress child theme development.
 The following dependencies need to be installed on your system before deploying the framework.
 
 * Node.js: [http://nodejs.org/](http://nodejs.org/)
-* Ruby: [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
+* Ruby: [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/), on windows use: [http://rubyinstaller.org/](http://rubyinstaller.org/)
 * Git: [http://git-scm.com/](http://git-scm.com/)
 * Sass: [http://sass-lang.com/](http://sass-lang.com/)
 * Grunt Cli: [http://gruntjs.com/](http://gruntjs.com/)
