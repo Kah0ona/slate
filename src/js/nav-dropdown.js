@@ -6,12 +6,12 @@
 // *************************************
 
 // -------------------------------------
-// Toggle .is-hidden class onclick and 
+// Toggle .is-hidden class onclick and
 // allow only one open menu at a time
 // -------------------------------------
 
 $(document).ready(function() {
-  
+
   // When a dropdown trigger is clicked
   $('.Navigation-link--dropdownTrigger').click(function(e) {
     // If the selected dropdown list is not visible
@@ -24,7 +24,7 @@ $(document).ready(function() {
         .removeClass('is-hidden');
       // Make its parents visible
       $(this).parents('.Navigation-list--dropdown')
-        .removeClass('is-hidden');      
+        .removeClass('is-hidden');
     // If the selected dropdown is visible
     } else {
       // Hide the selected dropdown
@@ -32,7 +32,10 @@ $(document).ready(function() {
       // Hide the descendants of the selected dropdown
       $(this).children('.Navigation-list--dropdown').addClass('is-hidden');
     }
-  }).children('a.Navigation-link--dropdownTrigger').click(function(e){e.preventDefault();});
+  }).click(function(e){
+    // Prevent screen from jumping when clicking a dropdownTrigger
+    e.preventDefault();
+  });
   // Stop clicks on navigation links from bubbling up
   $('.Navigation-link').click(function(e) {
     e.stopPropagation();
@@ -46,7 +49,7 @@ $(document).ready(function() {
 // -------------------------------------
 
 $(document).click(function(){
-  
+
   $(".Navigation-list--dropdown").addClass('is-hidden');
 
 });
