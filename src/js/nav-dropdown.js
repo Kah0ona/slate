@@ -13,7 +13,7 @@
 $(document).ready(function() {
 
   // When a dropdown trigger is clicked
-  $('.Navigation-link--dropdownTrigger').click(function(e) {
+  $('.js-dropdown').click(function(e) {
     // If the selected dropdown list is not visible
     if( $(this).siblings('.Navigation-list--dropdown').hasClass('is-hidden') ){
       // Hide all dropdown lists, except the selected dropdown and its parents
@@ -33,7 +33,7 @@ $(document).ready(function() {
       $(this).children('.Navigation-list--dropdown').addClass('is-hidden');
     }
   }).click(function(e){
-    // Prevent screen from jumping when clicking a dropdownTrigger
+    // Prevent screen from jumping when clicking a dropdown trigger
     e.preventDefault();
   });
   // Stop clicks on navigation links from bubbling up
