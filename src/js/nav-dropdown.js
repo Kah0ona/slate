@@ -13,7 +13,7 @@
 $(document).ready(function() {
 
   // When a dropdown trigger is clicked
-  $('.js-dropdown').click(function(e) {
+  $('.js-navDropdown').click(function(e) {
     // If the selected dropdown list is not visible
     if( $(this).siblings('.Navigation-list--dropdown').hasClass('is-hidden') ){
       // Hide all dropdown lists, except the selected dropdown and its parents

@@ -37,7 +37,7 @@ function navigation_walker_setup(){
 
         $hasDropdown = '';
         if($args->has_children) {
-          $hasDropdown = 'Navigation-link--dropdown js-dropdown';
+          $hasDropdown = 'Navigation-link--dropdown js-navDropdown';
         }
 
         $attributes .= ' class="Navigation-link '.$activeClass.' '.$hasDropdown.'"';
