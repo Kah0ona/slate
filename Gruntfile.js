@@ -86,7 +86,9 @@ module.exports = function (grunt) {
           'copy:css_child',
           // Process images
           'imagemin:all',
-          'delete_sync:img'
+          'delete_sync:img',
+          // Process svg icons
+          'svgstore:all'
         );
       };
       if (style === 'expanded') {
@@ -106,7 +108,9 @@ module.exports = function (grunt) {
           'copy:css_child',
           // Process images
           'newer:imagemin:all',
-          'delete_sync:img'
+          'delete_sync:img',
+          // Process svg icons
+          'svgstore:all'
         );
       };
     };

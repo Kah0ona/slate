@@ -78,9 +78,9 @@ module.exports = function (grunt) {
         dest: 'dev/scss',
         expand: true
       }, {
-        cwd: 'src/ico',
+        cwd: 'src/ico/library',
         src: '*.svg',
-        dest: 'dev/ico',
+        dest: 'dev/ico/library',
         expand: true
       }],
       options: {

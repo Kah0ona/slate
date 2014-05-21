@@ -14,6 +14,13 @@ module.exports = {
       'ftpush:deploy_child'
     ]
   },
+  svg: {
+    files: ['dev/ico/library/**/*.svg'],
+    tasks: [
+      'svgstore:all',
+      'ftpush:deploy_child'
+    ]
+  },
   js: {
     files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: [
