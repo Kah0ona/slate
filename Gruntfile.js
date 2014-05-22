@@ -77,7 +77,7 @@ module.exports = function (grunt) {
           'autoprefixer:compressed',
           'csslint:strict',
           // Lint, concat and minify js
-          'jshint:strict'
+          'jshint:strict',
           'concat:all',
           'uglify:all',
           // Process php
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
           // Make sure all bower libs are present
           'newer:copy:bower_libs',
           // Lint and concat js
-          'jshint:strict'
+          'jshint:strict',
           'concat:all',
           // Process php
           'newer:copy:php_child',
