@@ -11,6 +11,7 @@ module.exports = {
     tasks: [
       'sass:expanded',
       'autoprefixer:expanded',
+      'csslint:strict',
       'ftpush:deploy_child'
     ]
   },
@@ -34,13 +35,6 @@ module.exports = {
       'newer:copy:php_child',
       'delete_sync:php_templates',
       'delete_sync:php_includes',
-      'ftpush:deploy_child'
-    ]
-  },
-  css: {
-    files: ['dev/css/style.child'],
-    tasks: [
-      'copy:css_child',
       'ftpush:deploy_child'
     ]
   },

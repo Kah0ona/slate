@@ -14,7 +14,8 @@ module.exports = {
 
   compressed: {
     options: {
-      style: 'compressed'
+      style: 'compressed',
+      quiet: true
     },
     files: {
       'dist/child/css/production.min.css': 'dev/scss/global.scss'
@@ -26,6 +27,7 @@ module.exports = {
   expanded: {
     options: {
       style: 'expanded',
+      quiet: true,
       sourcemap: true
     },
     files: {

@@ -72,9 +72,10 @@ module.exports = function (grunt) {
     if (type === 'child') {
       if (style === 'compressed') {
         grunt.task.run(
-          // Compile sass
+          // Compile sass and prefix and lint css
           'sass:compressed',
           'autoprefixer:compressed',
+          'csslint:strict',
           // Concat and minify js
           'concat:all',
           'uglify:all',
@@ -93,9 +94,10 @@ module.exports = function (grunt) {
       };
       if (style === 'expanded') {
         grunt.task.run(
-          // Compile sass
+          // Compile sass and prefix and lint css
           'sass:expanded',
           'autoprefixer:expanded',
+          'csslint:strict',
           // Make sure all bower libs are present
           'newer:copy:bower_libs',
           // Concat js
