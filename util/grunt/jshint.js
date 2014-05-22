@@ -1,5 +1,5 @@
 // -------------------------------------
-// Grunt Csslint
+// Grunt Jshint
 // -------------------------------------
 
 module.exports = {
@@ -7,12 +7,14 @@ module.exports = {
   // ----- Default options ----- //
 
   options: {
-    csslintrc: '.csslintrc'
+    jshintrc: ".jshintrc"
   },
 
-// ----- Strict rules ----- //
+  // ----- Strict ----- //
 
   strict: {
-    src: ['dist/child/css/production.min.css']
+    files: {
+      src: ['lib/js/**/*.js', 'dev/js/*.js']
+    }
   }
 };

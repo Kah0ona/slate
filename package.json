@@ -1,6 +1,6 @@
 {
   "name": "Slate",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": {
     "name": "",
     "email": "",
@@ -15,6 +15,7 @@
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-csslint": "^0.2.0",
     "grunt-contrib-imagemin": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",

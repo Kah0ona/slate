@@ -25,6 +25,7 @@ module.exports = {
   js: {
     files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: [
+      'jshint:strict'
       'concat:all',
       'ftpush:deploy_child'
     ]
