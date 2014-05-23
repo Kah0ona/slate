@@ -85,11 +85,16 @@ The following dependencies need to be installed on your system before deploying 
 
 - [ ] Create a contact page with a contactform and test it
 - [ ] Add a map to the contact page (google maps: [here](https://www.google.com/maps?output=classic))
-- [ ] Generate the favicons
-- [ ] Create a footer menu and add the landingpages to it
+- [ ] Generate the favicons, and app icons
+- [ ] Create a footer menu, call the menu 'footermenu' to make the dropdown script work.
 - [ ] Add the customers' contact details to the footer
 - [ ] Create a site signature in footer.php (copyright & built by ...)
 - [ ] Create an app page
+- [ ] If it is a site, add 'Website gebouwd door LokaalGevonden', if it is a shop add 'Webshop gebouwd door LokaalGevonden'
+- [ ] Make the logo link to the home page (add a <a href="/"> tag)
+- [ ] For sites that use typekit fonts, check if the domain is set in the Kit Settings
+- [ ] Add the user 'tamara', to the wordpress, select 'Administrator', and check 'don't send email'
+
 
 #####Final checks
 
