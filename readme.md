@@ -89,7 +89,7 @@ The following dependencies need to be installed on your system before deploying 
 - [ ] Create a footer menu, call the menu 'footermenu' to make the dropdown script work.
 - [ ] Add the customers' contact details to the footer
 - [ ] Create an app page
-- [ ] Add 'Website en SEO door LokaalGevonden' in footer.php
+- [ ] Add 'Website en SEO door LokaalGevonden' in footer.php. NB: Use 'Webshop' if it is a webshop!
 - [ ] Make the logo link to the home page (add a <a href="/"> tag)
 - [ ] For sites that use typekit fonts, check if the domain is set in the Kit Settings
 - [ ] Add the user 'tamara', to the wordpress, select 'Administrator', and check 'don't send email'
