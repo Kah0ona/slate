@@ -99,5 +99,6 @@ The following dependencies need to be installed on your system before deploying 
 
 - [ ] Check the website in all screensizes and on the relevant browsers (with [browserstack.com](http://www.browserstack.com/))
 - [ ] Go through all the pages, check the links, effects and content
+- [ ] Call/mail the accountmanager to notify him about the website, and ask if he spots any bugs.
 - [ ] Call the customer and ask them if they're satisfied
 - [ ] Add the live domain (through `settings` -> `domains` )
