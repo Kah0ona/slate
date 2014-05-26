@@ -5,7 +5,7 @@
 module.exports = {
 
   "js": {
-    src : ["src/js/*.js"],
+    src : ["dev/js/*.js"],
     options: {
       config: ".jsbeautifyrc"
     }

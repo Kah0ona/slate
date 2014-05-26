@@ -11,7 +11,7 @@ module.exports = {
     tasks: [
       'sass:expanded',
       'autoprefixer:expanded',
-      'csslint:strict',
+      'csslint:expanded',
       'ftpush:deploy_child'
     ]
   },
@@ -25,8 +25,9 @@ module.exports = {
   js: {
     files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: [
+      'jsbeautifier:js',
       'jshint:strict',
-      'concat:all',
+      'newer:copy:js',
       'ftpush:deploy_child'
     ]
   },
@@ -36,6 +37,7 @@ module.exports = {
       'newer:copy:php_child',
       'delete_sync:php_templates',
       'delete_sync:php_includes',
+      'processhtml:expanded',
       'ftpush:deploy_child'
     ]
   },

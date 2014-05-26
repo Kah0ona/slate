@@ -9,7 +9,6 @@ module.exports = {
   init: {
     options: {
       create: [
-        'dev/ico/favicon',
         'dev/img'
       ]
     }

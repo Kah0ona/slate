@@ -8,8 +8,6 @@ module.exports = {
 
   // Regular install
   bower_install: 'bower install',
-  // Don't install devDependencies
-  bower_production: 'bower install --production',
 
   // ----- Update git config ----- //
 

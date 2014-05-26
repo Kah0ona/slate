@@ -10,20 +10,6 @@ module.exports = function (grunt) {
 
     bower_libs: {
       files: [{
-        cwd: 'bower_components/jquery/dist',
-        src: 'jquery.min.js',
-        dest: 'dist/child/js/standalone',
-        expand: true,
-        flatten: true,
-        filter: 'isFile'
-      }, {
-        cwd: 'bower_components/modernizr',
-        src: 'modernizr.js',
-        dest: 'dist/child/js/standalone',
-        expand: true,
-        flatten: true,
-        filter: 'isFile'
-      }, {
         cwd: 'bower_components/bourbon/app/assets/stylesheets',
         src: '**',
         dest: 'lib/scss/bourbon',
