@@ -76,7 +76,8 @@ module.exports = function (grunt) {
           'sass:compressed',
           'autoprefixer:compressed',
           'csslint:strict',
-          // Lint, concat and minify js
+          // Beautify, lint, concat and minify js
+          'jsbeautifier:js',
           'jshint:strict',
           'concat:all',
           'uglify:all',
@@ -101,7 +102,8 @@ module.exports = function (grunt) {
           'csslint:strict',
           // Make sure all bower libs are present
           'newer:copy:bower_libs',
-          // Lint and concat js
+          // Beautify, lint and concat js
+          'jsbeautifier:js',
           'jshint:strict',
           'concat:all',
           // Process php
