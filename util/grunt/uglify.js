@@ -13,7 +13,7 @@ module.exports = {
   // ----- Minify js ----- //
 
   all: {
-    src: 'dist/child/js/production.min.js',
+    src: 'dist/child/js/production.js',
     dest: 'dist/child/js/production.min.js'
   }
 };

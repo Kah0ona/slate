@@ -23,12 +23,16 @@
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
 
-    <!-- Include only one concatenated stylesheet here, minified -->
+    <!-- build:remove:expanded -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/production.min.css">
+    <!-- /build -->
+    <!-- build:remove:compressed -->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/production.css">
+    <!-- /build -->
 
-    <!-- Head scripts, avoid including scripts here -->
-    <!-- Don't forget to compile and minify the used modernizr features, or to remove it when unused -->
+    <!-- build:remove:compressed -->
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/standalone/modernizr.js"></script>
+    <!-- /build -->
 
     <!-- Wordpress head function -->
     <?php wp_head(); ?>

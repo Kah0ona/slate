@@ -31,7 +31,7 @@ module.exports = {
       sourcemap: true
     },
     files: {
-      'dist/child/css/production.min.css': 'dev/scss/global.scss'
+      'dist/child/css/production.css': 'dev/scss/global.scss'
     }
   }
 };

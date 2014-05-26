@@ -10,9 +10,16 @@ module.exports = {
     csslintrc: '.csslintrc'
   },
 
-// ----- Strict rules ----- //
+  // ----- Compressed ----- //
 
-  strict: {
+  compressed: {
     src: ['dist/child/css/production.min.css']
+  },
+
+  // ----- Expanded ----- //
+
+  expanded: {
+    src: ['dist/child/css/production.css']
   }
+
 };

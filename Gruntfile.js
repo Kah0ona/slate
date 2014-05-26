@@ -75,7 +75,7 @@ module.exports = function (grunt) {
           // Compile sass and prefix and lint css
           'sass:compressed',
           'autoprefixer:compressed',
-          'csslint:strict',
+          'csslint:compressed',
           // Beautify, lint, concat and minify js
           'jsbeautifier:js',
           'jshint:strict',
@@ -85,6 +85,7 @@ module.exports = function (grunt) {
           'copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
+          'processhtml:compressed',
           // Copy Wp child css
           'copy:css_child',
           // Process images
@@ -99,17 +100,18 @@ module.exports = function (grunt) {
           // Compile sass and prefix and lint css
           'sass:expanded',
           'autoprefixer:expanded',
-          'csslint:strict',
+          'csslint:expanded',
           // Make sure all bower libs are present
           'newer:copy:bower_libs',
-          // Beautify, lint and concat js
+          // Beautify, lint and copy js
           'jsbeautifier:js',
           'jshint:strict',
-          'concat:all',
+          'newer:copy:js',
           // Process php
           'newer:copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
+          'processhtml:expanded',
           // Copy Wp child css
           'copy:css_child',
           // Process images
