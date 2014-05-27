@@ -107,6 +107,7 @@ The following dependencies need to be installed on your system before deploying 
 4. Developing slate tips & tricks
 ----------------------------------
 
-`grunt bump:{patch|minor|major}` updates the version number of slate and lets it depend on another parent theme. Also tags a git commit, showing it with releases in github. The plugin can be found on https://github.com/vojtajina/grunt-bump.
+`grunt bump:{patch|minor|major}` updates the version number of slate and lets it depend on another parent theme. Also tags a git commit, showing it with releases in github. The plugin can be found on https://github.com/vojtajina/grunt-bump. 
+- `grunt --help` for help and a list of tasks that are available. Note especially: develop, deploy, init, build
 
 
