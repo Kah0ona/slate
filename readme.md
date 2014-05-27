@@ -102,3 +102,11 @@ The following dependencies need to be installed on your system before deploying 
 - [ ] Call/mail the accountmanager to notify him about the website, and ask if he spots any bugs.
 - [ ] Call the customer and ask them if they're satisfied
 - [ ] Add the live domain (through `settings` -> `domains` )
+
+
+4. Developing slate tips & tricks
+----------------------------------
+
+`grunt bump:{patch|minor|major}` updates the version number of slate and lets it depend on another parent theme. Also tags a git commit, showing it with releases in github.
+
+
