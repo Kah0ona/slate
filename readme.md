@@ -16,6 +16,8 @@ The following dependencies need to be installed on your system before deploying 
 * Bower: [http://bower.io/](http://bower.io/)
 * A local Wordpress install is optional
 
+Note: On Windows, one might want to use Console2 instead of the normal cmd prompt.
+
 2. Getting Started
 ------------------
 
