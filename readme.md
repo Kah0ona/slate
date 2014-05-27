@@ -114,3 +114,6 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 - `npm outdated` to check which packages are outdated in package.json file.
 - When adding js scripts, update footer.php for the development mode.
 
+5. Useful links
+------------
+- [http://icomoon.io] (icomoon.io)
