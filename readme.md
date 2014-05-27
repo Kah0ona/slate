@@ -116,4 +116,4 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 
 5. Useful links
 ------------
-- (icomoon.io) [http://icomoon.io] 
+- (icomoon.io)[http://icomoon.io] 
