@@ -111,5 +111,6 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 
 `grunt bump:{patch|minor|major}` updates the version number of slate and lets it depend on another parent theme. Also tags a git commit, showing it with releases in github. The plugin can be found on https://github.com/vojtajina/grunt-bump. 
 - `grunt --help` for help and a list of tasks that are available. Note especially: develop, deploy, init, build
-
+- `npm outdated` to check which packages are outdated in package.json file.
+- When adding js scripts, update footer.php for the development mode.
 
