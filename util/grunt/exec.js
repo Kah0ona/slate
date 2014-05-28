@@ -13,6 +13,8 @@ module.exports = {
 
   // Set the remote
   git_set_remote: 'git config remote.origin.url "<%= projectCloneUrl %>"',
+  // Re-set the remote
+  git_reset_remote: 'git config remote.origin.url "<%= package.repository.url %>"',
   // Log the current remote
   git_log_remote: 'git config remote.origin.url'
 };

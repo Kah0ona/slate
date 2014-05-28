@@ -44,6 +44,23 @@ module.exports = function (grunt) {
     'ftpush:init_deploy_child'
   ]);
 
+  // ----- Grunt reinit ----- //
+
+  grunt.registerTask('reinit', 'Re-initialize the development environment, build and deploy child theme.', [
+    // Show warnings
+    'attention:ftppass_reminder',
+    // Ask for necessary variables and process them
+    'mkdir:init',
+    'exec:git_set_remote',
+    'exec:git_log_remote',
+    // Install and process bower libs
+    'exec:bower_install',
+    'copy:bower_libs',
+    // Build child theme
+    'build:child:expanded',
+    'ftpush:init_deploy_child'
+  ]);
+
   // ----- Grunt develop ----- //
 
   grunt.registerTask('develop', 'Build child theme, watch for changes and process them.', [

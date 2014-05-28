@@ -6,6 +6,10 @@
     "email": "",
     "url": ""
   },
+  "repository" : {
+    "type" : "git",
+    "url" : ""
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-attention": "0.0.4",

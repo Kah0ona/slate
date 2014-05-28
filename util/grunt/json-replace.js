@@ -13,6 +13,9 @@ module.exports = {
               "name": "<%= authorName %>",
               "email": "<%= authorMail %>",
               "url": "<%= authorWebsite %>"
+            },
+            "repository": {
+              "url": "<%= projectCloneUrl %>"
             }
         }
       },
