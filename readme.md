@@ -26,10 +26,6 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 * Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory
 * Create a new repository for your project
 
-#####Ftp
-
-* Copy an .ftppass file to the root of your local project folder
-
 #####Setup
 
 * Run `npm install`

@@ -4,7 +4,7 @@
 
 module.exports = {
 	deploy_child: {
-		files: "deploy/child/",
+		files: "dist/child/",
 		options: {
 			host: "vps8063.xlshosting.net",
 			port: "1023",
@@ -13,7 +13,7 @@ module.exports = {
 		}
 	},
 	deploy_parent: {
-		files: "deploy/parent/",
+		files: "dist/parent/",
 		options: {
 			host: "vps8063.xlshosting.net",
 			port: "1023",
@@ -22,7 +22,7 @@ module.exports = {
 		}
 	},
 	init_deploy_child: {
-		files: "deploy/child/",
+		files: "dist/child/",
 		options: {
 			host: "vps8063.xlshosting.net",
 			port: "1023",
