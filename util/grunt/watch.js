@@ -12,14 +12,14 @@ module.exports = {
       'sass:expanded',
       'autoprefixer:expanded',
       'csslint:expanded',
-      'ftpush:deploy_child'
+      'rsync:deploy_child'
     ]
   },
   svg: {
     files: ['dev/ico/library/**/*.svg'],
     tasks: [
       'svgstore:all',
-      'ftpush:deploy_child'
+      'rsync:deploy_child'
     ]
   },
   js: {
@@ -28,7 +28,7 @@ module.exports = {
       'jsbeautifier:js',
       'jshint:strict',
       'newer:copy:js',
-      'ftpush:deploy_child'
+      'rsync:deploy_child'
     ]
   },
   php: {
@@ -38,7 +38,7 @@ module.exports = {
       'delete_sync:php_templates',
       'delete_sync:php_includes',
       'processhtml:expanded',
-      'ftpush:deploy_child'
+      'rsync:deploy_child'
     ]
   },
   img: {
@@ -46,7 +46,7 @@ module.exports = {
     tasks: [
       'newer:imagemin:all',
       'delete_sync:img',
-      'ftpush:deploy_child'
+      'rsync:deploy_child'
     ]
   },
 

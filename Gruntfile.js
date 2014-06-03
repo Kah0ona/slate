@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('init', 'Initialize the development environment, build and deploy initial themes.', [
     // Show warnings
-    'attention:ftppass_reminder',
+    //'attention:ftppass_reminder',
     'attention:deletion_warning',
     // Ask for necessary variables and process them
     'prompt:init',
