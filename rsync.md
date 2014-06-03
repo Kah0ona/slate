@@ -6,12 +6,14 @@ Mac OS X
 
 The step below has to be done only once. 
 
-* Add SSH keys to ~/.ssh/lmd (more info: [here](http://www.serverwatch.com/tutorials/article.php/3846546/Saving-ssh-Keys-on-Mac-OS-X-Leopard.htm)
+* Add SSH keys to ~/.ssh/lmd (more info: http://www.serverwatch.com/tutorials/article.php/3846546/Saving-ssh-Keys-on-Mac-OS-X-Leopard.htm)
 
-* Run `ssh-keygen -t rsa -f ~/.ssh/lokaalgevonden`
+* Run `ssh-keygen -t rsa -f ~/.ssh/lokaalgevonden` (press enter until it is done)
 * Run (ask marten for password): `scp ~/.ssh/lokaalgevonden.pub ftpsecure@vps8063.xlshosting.net:/var/www` 
 * Run `ssh-add -K ~/.ssh/lokaalgevonden`
-* Tell Marten you have done this, so he can set up the server.
+* Tell Marten you have done this, so he can give you access on the server.
+* Run `ssh ftpsecure@vps8063.xlshosting.net`, it should give you access. If it does, type exit.
+
 
 
 
