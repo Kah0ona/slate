@@ -23,12 +23,13 @@ If an existing project still uses ftpush, it has to be migrated. To do this, do 
 NOTE: this will not work for the very old grunt projects, since they do not have a deploy directory yet.
 
 * Run `npm install grunt-rsync-2 --save-dev`
-* In your Gruntfile.js, comment out all the notions of ftpush, by adding a // in front of it
-* Add a new file called rsync.js to /util/grunt, and put in the following contents:
+* In your Gruntfile.js, change all the notions of the word ftpush to rsync. 
+* Do the same in the file `/util/grunt/watch.js`.
+* Add a new file called `rsync.js` to `/util/grunt`, and put in the following contents:
 
 ```javascript
 // -------------------------------------
-// Grunt RSYNC way of deploying
+// rsync.js -  Grunt RSYNC way of deploying
 // -------------------------------------
 
 module.exports = {
@@ -62,4 +63,16 @@ module.exports = {
 
 };
 
+```
+
+* In Gruntfile.js, add the following code, right below the `grunt.registerTask('develop'....` block:
+
+```javascript
+  grunt.registerTask('sync', 'RSyncs the runtime (child theme) to the server.', [
+	 'rsync:deploy_child', 
+  ]);
+
+  grunt.registerTask('sync2', 'RSyncs the runtime (parent theme) to the server.', [
+	 'rsync:deploy_parent', 
+  ]);
 ```

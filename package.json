@@ -35,6 +35,7 @@
     "grunt-svgstore": "^0.1.0",
     "load-grunt-config": "^0.8.0",
     "load-grunt-tasks": "^0.4.0",
-    "grunt-processhtml": "^0.3.3"
+    "grunt-processhtml": "^0.3.3",
+	"grunt-rsync-2": "^0.1.3"		
   }
 }
