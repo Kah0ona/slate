@@ -65,7 +65,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('develop', 'Build child theme, watch for changes and process them.', [
     'build:child:expanded',
-	'rsync:deploy_child',
     'watch'
   ]);
 

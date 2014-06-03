@@ -23,7 +23,7 @@ If an existing project still uses ftpush, it has to be migrated. To do this, do 
 NOTE: this will not work for the very old grunt projects, since they do not have a deploy directory yet.
 
 * Run `npm install grunt-rsync-2 --save-dev`
-* Uninstall grunt-ftpush: `npm uninstall grunt-ftpush`
+* Uninstall grunt-ftpush: `npm uninstall grunt-ftpush --save-dev`
 * In your Gruntfile.js, change all the notions of the word ftpush to rsync. 
 * Do the same in the file `/util/grunt/watch.js`.
 * Add a new file called `rsync.js` to `/util/grunt`, and put in the following contents:
