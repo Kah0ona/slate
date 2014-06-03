@@ -16,4 +16,50 @@ The step below has to be done only once.
 
 
 
+Migrating a project from FTPUSH to RSYNC usage
+===============================================
 
+If an existing project still uses ftpush, it has to be migrated. To do this, do the following.
+NOTE: this will not work for the very old grunt projects, since they do not have a deploy directory yet.
+
+* Run `npm install grunt-rsync-2 --save-dev`
+* In your Gruntfile.js, comment out all the notions of ftpush, by adding a // in front of it
+* Add a new file called rsync.js to /util/grunt, and put in the following contents:
+
+```javascript
+// -------------------------------------
+// Grunt RSYNC way of deploying
+// -------------------------------------
+
+module.exports = {
+	deploy_child: {
+		files: "deploy/child/",
+		options: {
+			host: "vps8063.xlshosting.net",
+			port: "1023",
+			user: "ftpsecure",
+			remoteBase: "/var/www/wp-content/themes/slate-<%= package.version %>_<%= package.name %>"
+		}
+	},
+	deploy_parent: {
+		files: "deploy/parent/",
+		options: {
+			host: "vps8063.xlshosting.net",
+			port: "1023",
+			user: "ftpsecure",
+			remoteBase: "/var/www/wp-content/themes/slate-<%= package.version %>"
+		}
+	},
+	init_deploy_child: {
+		files: "deploy/child/",
+		options: {
+			host: "vps8063.xlshosting.net",
+			port: "1023",
+			user: "ftpsecure",
+			remoteBase: "/var/www/wp-content/themes/slate-<%= package.version %>_<%= projectName %>"
+		}
+	},
+
+};
+
+```
