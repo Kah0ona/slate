@@ -23,7 +23,8 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 
 #####Git
 
-* Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory
+* Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory, in a useful directory:
+`git clone https://github.com/Kah0ona/slate.git <projectname>`
 * Create a new repository for your project
 
 #####Setup
