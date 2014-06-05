@@ -91,7 +91,7 @@ module.exports = function (grunt) {
           // Compile sass and prefix and lint css
           'sass:compressed',
           'autoprefixer:compressed',
-          'csslint:compressed',
+          //'csslint:compressed',
           // Beautify, lint, concat and minify js
           'jsbeautifier:js',
           'jshint:strict',
@@ -101,11 +101,11 @@ module.exports = function (grunt) {
           'copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
-          'processhtml:compressed',
+          //'processhtml:compressed',
           // Copy Wp child css
           'copy:css_child',
           // Process images
-          'imagemin:all',
+          //'imagemin:all',
           'delete_sync:img',
           // Process svg icons
           'svgstore:all'

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
   // Make actual choices out of them that grunt-prompt can use
   var templateChoices = templateFiles.map(function (t) {
-      return { name: t, checked: false};
+      return { name: t, checked: true};
   });
   var includeChoices = includeFiles.map(function (t) {
       return { name: t, checked: true};
