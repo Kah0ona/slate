@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
   // List files in the src directories
   var templateFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/templates"}, ["*.php","*.child"]);
-  var includeFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/includes"}, ["*.php"]);
+  var includeFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/includes"}, ["*.php, *.xml"]);
   var scriptFiles = grunt.file.expand({filter: "isFile", cwd: "src/js"}, ["*.js"]);
 
   // Make actual choices out of them that grunt-prompt can use
@@ -51,7 +51,33 @@ module.exports = function(grunt) {
           filter: function(slugString) {
             return slugString.replace(/ /g, '-').replace(/\./, '-').toLowerCase();
           }
-        }, {
+        }, 
+		{
+          config: 'clientMail',
+          type: 'input',
+          message: "What is the CLIENT's email address?"
+		},
+		{
+          config: 'clientPhone',
+          type: 'input',
+          message: "What is the CLIENT's main phone number?"
+		},
+		{
+          config: 'clientStreet',
+          type: 'input',
+          message: "What is the CLIENT's street+number?"
+		},
+		{
+          config: 'clientZipcode',
+          type: 'input',
+          message: "What is the CLIENT's zipcode/postcode?"
+		},
+		{
+          config: 'clientCity',
+          type: 'input',
+          message: "What is the CLIENT's city?"
+		},
+		{
           // Set the project's homepage url
           config: 'projectWebsite',
           type: 'input',

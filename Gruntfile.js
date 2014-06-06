@@ -32,6 +32,7 @@ module.exports = function (grunt) {
     'mkdir:init',
     'json-replace:init_npm',
     'json-replace:init_bower',
+	'replace',
     'exec:git_set_remote',
     'exec:git_log_remote',
     // Install and process bower libs

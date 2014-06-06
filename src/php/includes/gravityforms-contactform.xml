@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.8.7">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[contact]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[Verzenden]]></text>
+		</button>
+		<fields>
+			<field id="1" isRequired="1" size="medium" type="name" nameFormat="simple">
+				<label><![CDATA[Naam]]></label>
+			</field>
+			<field id="2" size="medium" type="phone" phoneFormat="international">
+				<label><![CDATA[Telefoon]]></label>
+			</field>
+			<field id="3" isRequired="1" size="medium" type="email">
+				<label><![CDATA[E-mailadres]]></label>
+			</field>
+			<field id="4" size="medium" type="textarea">
+				<label><![CDATA[Bericht]]></label>
+			</field>
+			<field id="5" isRequired="1" size="medium" type="text">
+				<cssClass><![CDATA[validate-anti-spam]]></cssClass>
+				<label><![CDATA[Ter voorkoming van spam, hoeveel is 2 minus 2?]]></label>
+			</field>
+		</fields>
+		<confirmations>
+			<confirmation id="535666d9363f8" isDefault="1" type="message">
+				<name><![CDATA[Standaard bedankbericht]]></name>
+				<message><![CDATA[Bedankt voor uw bericht. We nemen z.s.m. contact met u op.]]></message>
+			</confirmation>
+		</confirmations>
+		<notifications>
+			<notification id="535666d9344bc">
+				<to><![CDATA[@@clientmail]]></to>
+				<name><![CDATA[Standaard notificatie]]></name>
+				<event><![CDATA[form_submission]]></event>
+				<toType><![CDATA[email]]></toType>
+				<subject><![CDATA[Contactformulier ingevuld op website]]></subject>
+				<message><![CDATA[{all_fields}]]></message>
+				<from><![CDATA[{E-mailadres:3}]]></from>
+				<fromName><![CDATA[{Naam:1}]]></fromName>
+				<replyTo><![CDATA[{E-mailadres:2}]]></replyTo>
+				<conditionalLogic><![CDATA[undefined]]></conditionalLogic>
+			</notification>
+		</notifications>
+	</form>
+</forms>
+
+
+

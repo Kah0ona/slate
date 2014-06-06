@@ -86,7 +86,7 @@ module.exports = function (grunt) {
         expand: true
       }, {
         cwd: 'dev/php/includes',
-        src: '*.php',
+        src: '*.*',
         dest: 'dist/child/includes',
         expand: true
       }]

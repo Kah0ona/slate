@@ -1,4 +1,7 @@
 <?php
+  //import the default gravityform contact forms
+  define("GF_THEME_IMPORT_FILE", "@@gravityform_xml_url");
+
   // Register the sitemap menu
   add_action( 'init', 'register_menu_sitemap' );
 
@@ -7,4 +10,7 @@
   'sitemap' => 'Sitemap'
       ));
   }
+
+
+
 ?>
