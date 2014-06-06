@@ -42,7 +42,42 @@
 .u-gridRow {
   @include row();
 }
-
+.u-gridCol1 {
+	@include span-columns(1);
+}
+.u-gridCol2 {
+	@include span-columns(2);
+}
+.u-gridCol3 {
+	@include span-columns(3);
+}
+.u-gridCol4 {
+	@include span-columns(4);
+}
+.u-gridCol5 {
+	@include span-columns(5);
+}
+.u-gridCol6 {
+	@include span-columns(6);
+}
+.u-gridCol7 {
+	@include span-columns(7);
+}
+.u-gridCol8 {
+	@include span-columns(8);
+}
+.u-gridCol9 {
+	@include span-columns(9);
+}
+.u-gridCol10 {
+	@include span-columns(10);
+}
+.u-gridCol11 {
+	@include span-columns(11);
+}
+.u-gridCol12 {
+	@include span-columns(12);
+}
 // -------------------------------------
 // Text
 // -------------------------------------

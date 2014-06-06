@@ -1,3 +1,15 @@
+	<div class="Footer">
+		<div class="u-gridContainer">
+			<?php if ( is_active_sidebar( 'footer-widgets' ) ) : ?>
+			<div class="Footer-inner u-gridRow">
+				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+			</div>
+			<?php endif; ?>
+		</div>
+	</div>
+
+
+
 	<!-- Copyright info -->
 	<p>&copy; <?php bloginfo('name'); ?> <?php echo date("Y"); ?></p>
 

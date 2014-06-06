@@ -1,0 +1,9 @@
+.Footer {
+}
+
+.Footer-inner {
+}
+
+.Footer-inner .widget {
+	@include span-columns(4);
+}
