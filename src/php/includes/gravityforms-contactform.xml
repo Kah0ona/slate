@@ -32,7 +32,7 @@
 		</confirmations>
 		<notifications>
 			<notification id="535666d9344bc">
-				<to><![CDATA[@@clientmail]]></to>
+				<to><![CDATA[@@projectName]]></to>
 				<name><![CDATA[Standaard notificatie]]></name>
 				<event><![CDATA[form_submission]]></event>
 				<toType><![CDATA[email]]></toType>

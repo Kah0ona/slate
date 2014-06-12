@@ -11,12 +11,32 @@ module.exports = {
 		options: {
 			patterns: [
 				{
-					match: 'clientmail', //replaces @@clientmail
+					match: 'projectName', //replaces @@projectName
 					replacement: '<%= projectName %>'
 				},
 				{
 					match: 'gravityform_xml_url',
 					replacement: 'includes/gravityforms-contactform.xml'
+				},
+				{
+					match: 'clientStreet',
+					replacement: '<%= clientStreet %>'
+				},
+				{
+					match: 'clientZipcode',
+					replacement: '<%= clientZipcode %>'
+				},
+				{
+					match: 'clientCity',
+					replacement: '<%= clientCity %>'
+				},
+				{
+					match: 'clientEmail',
+					replacement: '<%= clientEmail %>'
+				},
+				{
+					match: 'clientPhone',
+					replacement: '<%= clientPhone %>'
 				}
 
 			]
