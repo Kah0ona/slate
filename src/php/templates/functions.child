@@ -11,6 +11,17 @@
       ));
   }
 
+ if(is_admin()){
+	  include_once('includes/initialize_pages.php');
+	
+	  $siteIniter = new SiteInitializer(
+		  "@@sitename", 
+		  "@@clientStreet @@clientZipcode @@clientCity", 
+		  "@@clientPhone", 
+		  "@@clientEmail");
+	  $siteIniter->initializeAll();
+  
+  }
 
 
 ?>
