@@ -8,7 +8,7 @@ Template Name: App page
 
 	<div>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<article class="Content Content--app" id="post-<?php the_ID(); ?>">
+		<div class="Content Content--app" id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
 			<div>
 				<aside class="u-gridCol4">
@@ -29,7 +29,7 @@ Template Name: App page
 					<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 				</article>
 			</div>
-		</article>
+		</div>
 	<?php endwhile; endif; ?>
 	</div>
 

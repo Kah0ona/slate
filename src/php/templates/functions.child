@@ -1,17 +1,22 @@
 <?php
   //import the default gravityform contact forms
-  define("GF_THEME_IMPORT_FILE", "@@gravityform_xml_url");
+define("GF_THEME_IMPORT_FILE", "@@gravityform_xml_url");
 
-  // Register the sitemap menu
-  add_action( 'init', 'register_menu_sitemap' );
+// Register the sitemap menu
+add_action( 'init', 'register_menu_sitemap' );
 
-  function register_menu_sitemap(){
-  register_nav_menus( array(
-  'sitemap' => 'Sitemap'
-      ));
-  }
+function register_menu_sitemap(){
+	register_nav_menus( array(
+		'sitemap' => 'Sitemap'
+    ));
+}
 
- if(is_admin()){
+$initialized = get_option('slate_initialized');
+if($initialized == null){
+	$initialized = false;
+}
+
+if(is_admin() && !$initialized){
 	  include_once('includes/initialize_pages.php');
 	
 	  $siteIniter = new SiteInitializer(
@@ -20,8 +25,8 @@
 		  "@@clientPhone", 
 		  "@@clientEmail");
 	  $siteIniter->initializeAll();
-  
-  }
+	  add_option('slate_initialized', true);
+}
 
 
 ?>
