@@ -117,7 +117,7 @@ module.exports = function (grunt) {
           // Compile sass and prefix and lint css
           'sass:expanded',
           'autoprefixer:expanded',
-          'csslint:expanded',
+         // 'csslint:expanded',
           // Make sure all bower libs are present
           'newer:copy:bower_libs',
           // Beautify, lint and copy js

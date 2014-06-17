@@ -32,7 +32,7 @@ module.exports = {
 				},
 				{
 					match: 'clientEmail',
-					replacement: '<%= clientEmail %>'
+					replacement: '<%= clientMail %>'
 				},
 				{
 					match: 'clientPhone',
@@ -47,7 +47,8 @@ module.exports = {
 				flatten: false, 
 				src: [
 					'dev/php/includes/gravityforms-contactform.xml',
-					'dev/php/templates/functions.php'
+					'dev/php/templates/functions.php',
+					'dev/js/google-maps.js'
 				]
 			}
 		]

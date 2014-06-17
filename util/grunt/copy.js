@@ -128,6 +128,20 @@ module.exports = function (grunt) {
         ext: '.css'
       }]
     },
+ 
+    img_child: {
+      files: [{
+        cwd: 'dev/img',
+        src: ['*.*'],
+        dest: 'dist/child/img',
+        expand: true
+      }, {
+        cwd: 'dev/ico',
+        src: '*.*',
+        dest: 'dist/child/ico',
+        expand: true
+      }]
+    },
 
     // ----- Copy js ----- //
 

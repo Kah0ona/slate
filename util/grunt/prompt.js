@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
   // List files in the src directories
   var templateFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/templates"}, ["*.php","*.child"]);
-  var includeFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/includes"}, ["*.php, *.xml"]);
+  var includeFiles = grunt.file.expand({filter: "isFile", cwd: "src/php/includes"}, ["*.php", "*.xml"]);
   var scriptFiles = grunt.file.expand({filter: "isFile", cwd: "src/js"}, ["*.js"]);
 
   // Make actual choices out of them that grunt-prompt can use

@@ -11,7 +11,7 @@ module.exports = {
     tasks: [
       'sass:expanded',
       'autoprefixer:expanded',
-      'csslint:expanded',
+      //'csslint:expanded',
       'rsync:deploy_child'
     ]
   },
@@ -44,11 +44,19 @@ module.exports = {
   img: {
     files: ['dev/img/**/*'],
     tasks: [
-      'newer:imagemin:all',
+      //'newer:imagemin:all',
       'delete_sync:img',
       'rsync:deploy_child'
     ]
   },
+  ico: {
+    files: ['dev/ico/*'],
+    tasks: [
+	  'copy:img_child',
+      'rsync:deploy_child'
+    ]
+  },
+
 
   // ----- Enable livereload ----- //
 
