@@ -10,7 +10,7 @@ Template Name: App page
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="Content Content--app" id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
-			<div>
+			<div class="u-gridContainer">
 				<aside class="u-gridCol4">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/screenshot.png" class="App-iphone" />
 				</aside>

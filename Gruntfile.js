@@ -95,7 +95,7 @@ module.exports = function (grunt) {
           //'csslint:compressed',
           // Beautify, lint, concat and minify js
           'jsbeautifier:js',
-          'jshint:strict',
+        //  'jshint:strict',
           'concat:all',
           'uglify:all',
           // Process php
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
           'newer:copy:bower_libs',
           // Beautify, lint and copy js
           'jsbeautifier:js',
-          'jshint:strict',
+        //  'jshint:strict',
           'newer:copy:js',
           // Process php
           'newer:copy:php_child',

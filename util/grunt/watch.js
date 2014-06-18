@@ -26,7 +26,7 @@ module.exports = {
     files: ['lib/js/**/*.js', 'dev/js/*.js'],
     tasks: [
       'jsbeautifier:js',
-      'jshint:strict',
+     // 'jshint:strict',
       'newer:copy:js',
       'rsync:deploy_child'
     ]
