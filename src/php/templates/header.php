@@ -41,14 +41,11 @@
   </head>
   <body <?php body_class(); ?> >
 
-	<!-- Main navigation + responsive toggle menu -->
-	<div class="Nav-toggle">
-		<a class="Navigation-menuToggle" id="js-navCollapse">
-			<svg class="Icon Icon--inline" viewBox="0 0 128 128">
-				<use xlink:href="#icon-menu2"></use>
-			</svg>
-		</a>
-	</div>
-
+	<!-- Main navigation + responsive icon-->
+	<a class="Navigation-menuToggle" id="js-navCollapse">
+		<svg class="Icon Icon--inline" viewBox="0 0 128 128">
+			<use xlink:href="#icon-menu2"></use>
+		</svg>
+	</a>
 
     <?php include 'includes/navigation.php'; ?>
