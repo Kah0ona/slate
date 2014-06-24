@@ -30,7 +30,7 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 #####Setup
 
 * Run `npm install`
-* Run `grunt init`
+* If it is a new project: run `grunt init`, else, if it is an existing project run `grunt reinit`
 
 #####Wordpress
 
