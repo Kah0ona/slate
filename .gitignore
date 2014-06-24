@@ -18,5 +18,6 @@ lib/*
 
 # System files
 *.swp
+*.swo
 [Tt]humbs.db
 *.DS_Store
