@@ -63,12 +63,22 @@ module.exports = function (grunt) {
         src: '**/*.scss',
         dest: 'dev/scss',
         expand: true
-      }, {
+      },
+	 
+	  {
+        cwd: 'src/ico/',
+        src: '*.svg',
+        dest: 'dev/ico/',
+        expand: true
+      },
+	  {
         cwd: 'src/ico/library',
         src: '*.svg',
         dest: 'dev/ico/library',
         expand: true
-      }],
+      }
+	  
+	  ],
       options: {
         process: function (content, srcpath) {
           return grunt.template.process(content);
