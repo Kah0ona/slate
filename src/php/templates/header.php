@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Title -->
-    <title><?php wp_title( '|', true, 'right' ); ?><?php echo get_bloginfo( 'name' ); ?></title>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
 
     <!-- Mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,11 +41,5 @@
   </head>
   <body <?php body_class(); ?> >
 
-	<!-- Main navigation + responsive icon-->
-	<a class="Navigation-menuToggle" id="js-navCollapse">
-		<svg class="Icon Icon--inline" viewBox="0 0 128 128">
-			<use xlink:href="#icon-menu2"></use>
-		</svg>
-	</a>
-
+    <!-- Main navigation -->
     <?php include 'includes/navigation.php'; ?>
