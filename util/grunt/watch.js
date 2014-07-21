@@ -18,7 +18,7 @@ module.exports = {
   svg: {
     files: ['dev/ico/library/**/*.svg'],
     tasks: [
-      'svgstore:all',
+      //'svgstore:all',
       'rsync:deploy_child'
     ]
   },
