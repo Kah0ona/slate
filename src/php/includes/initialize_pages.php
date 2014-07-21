@@ -31,8 +31,6 @@ class SiteInitializer {
 
 
 	public function createPages(){
-		wp_delete_post(1); 
-		wp_delete_post(2); 
 		$this->createPage('Home', 'home', 'Homepage', 'template-home.php');
 		$this->createPage('Contact', 'contact', '[gravityform id="1" name="contact" title="false" description="false" ajax="true"]', 'template-contact.php');
 		$this->createPage('App', 'app', 'App', 'template-app.php');
