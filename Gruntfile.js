@@ -52,8 +52,8 @@ module.exports = function (grunt) {
     //'attention:ftppass_reminder', // not needed when not using FTP
     // Ask for necessary variables and process them
     'mkdir:init',
-    'exec:git_reset_remote',
-    'exec:git_log_remote',
+    //'exec:git_reset_remote',
+    //'exec:git_log_remote',
     // Install and process bower libs
     'exec:bower_install',
     'copy:bower_libs',

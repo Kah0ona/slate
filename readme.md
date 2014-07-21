@@ -25,12 +25,14 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 
 * Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory, in a useful directory:
 `git clone https://github.com/Kah0ona/slate.git <projectname>`
-* Create a new repository for your project
+* cd <projectname>
+* Create a new repository for your project on github
 
 #####Setup
 
 * Run `npm install`
 * If it is a new project: run `grunt init`, else, if it is an existing project run `grunt reinit`
+* when running`grunt init`, follow the instructions carefully.
 
 #####Wordpress
 
