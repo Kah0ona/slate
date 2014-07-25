@@ -1,0 +1,161 @@
+// *************************************
+//
+// responsive-nav
+// -> The resopnsive nav menu css
+//
+// *************************************
+
+.Mob-contact-ico {
+	display: none;
+}
+
+
+
+/*   This is how the navigation should be orderd if using the responsive navigation below.
+
+
+.Navigation {
+	ul.Navigation-list {
+		margin: 0;
+		
+		li.Navigation-listItem {
+			margin: 0 -5px 0 0;
+			line-height: 49px;
+			padding: 15px 0;
+			border-left: 2px solid white;
+			
+			&:first-of-type {
+				border-left: 0px solid white;
+			}
+			
+			&:hover {
+				background-color: $c-grey;
+
+				-webkit-transition:all 0.2s ease;
+				-moz-transition:all 0.2s ease;
+				-o-transition:all 0.2s ease;
+				a.Navigation-link {
+					color: $c-red;
+					text-decoration: none;
+
+				}
+			}
+			
+			a.Navigation-link {
+				color: white;
+				font-size: 14px;
+				padding: 13px;
+				margin: 0;
+				font-weight: 600;
+				letter-spacing: 1.5px;
+			
+			}
+		}
+	}
+}
+*/
+
+
+//======================================================
+//          @media queries - Responsiveness
+//======================================================
+
+
+@media all and (max-width: 1040px) {
+
+//  This is the wrapper for the navigation
+	.Nav-wrap {
+		height: auto;
+		min-height: 60px; // <-- adjust to height of div
+	}
+
+//  Adjust the sizes and colors for erverything to your choice
+	.Navigation {	
+		position: relative;
+		ul.Navigation-list {
+			margin-top: 60px;
+			position: absolute;
+			li.Navigation-listItem {
+				display: block;
+				line-height: 30px;
+				border-left: 0 solid;
+
+				&:last-of-type {
+					margin-bottom: 15px;
+				}
+
+				&:hover {
+					background-color: $c-blue;
+
+					-webkit-transition:all 0.2s ease;
+					-moz-transition:all 0.2s ease;
+					-o-transition:all 0.2s ease;
+					a.Navigation-link {
+						color: $c-blue;
+						text-decoration: none;
+
+					}
+				}
+
+				a.Navigation-link {
+					color: white;
+					display: block;
+					font-size: 14px;
+					padding: 5px;
+					margin: 0;
+					font-weight: 600;
+					letter-spacing: 1.5px;
+
+				}
+			}
+		}
+	}
+
+//	This is for those 3 contact icons on the left of the navbar
+	.Mob-contact-ico {
+		display: block;
+		z-index: 5000;
+
+		a { 
+			border: 2px solid white;
+			position: absolute;
+			display: block;
+			width: 35px;
+			height: 35px;
+			border-radius: 7px;
+			top: 8px;
+			background-color: transparent;
+			&:hover {
+				background-color: rgba(255,255,255,0.2);
+			}
+
+			.Icon--inline {
+				fill: white;
+				width: 2em;
+				height: 2em;
+				padding-bottom: 1em;				
+			}
+		}
+
+		.telsvg {
+			left: 10px;				
+			.Icon--inline {
+				margin: -4px;
+			}
+		}
+
+		.tel2svg {
+			left: 55px;				
+			.Icon--inline {
+				margin: -5px;
+			}
+		}
+
+		.mailsvg {
+			left: 100px;				
+			.Icon--inline {
+				margin: -6px;
+			}
+		}
+	}
+}
