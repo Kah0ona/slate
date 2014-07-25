@@ -102,7 +102,7 @@ module.exports = function (grunt) {
           'copy:php_child',
           'delete_sync:php_templates',
           'delete_sync:php_includes',
-          //'processhtml:compressed',
+          'processhtml:compressed',
           // Copy Wp child css
           'copy:css_child',
           // Process images

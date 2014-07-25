@@ -27,7 +27,7 @@ module.exports = {
 			host: "vps8063.xlshosting.net",
 			port: "1023",
 			user: "ftpsecure",
-			remoteBase: "/var/www/wp-content/themes/slate-<%= package.version %>_<%= projectName %>"
+			remoteBase: "/var/www/wp-content/themes/slate-<%= package.version %>_<%= package.name %>"
 		}
 	},
 
