@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     'build:parent',
     'rsync:deploy_parent',
     'build:child:expanded',
-    'rsync:init_deploy_child'
+    'rsync:deploy_child'
   ]);
 
   // ----- Grunt reinit ----- //
