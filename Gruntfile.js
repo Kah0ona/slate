@@ -59,7 +59,7 @@ module.exports = function (grunt) {
     'copy:bower_libs',
     // Build child theme
     'build:child:expanded',
-    'rsync:init_deploy_child'
+    'rsync:deploy_child'
   ]);
 
   // ----- Grunt develop ----- //
