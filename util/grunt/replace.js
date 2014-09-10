@@ -49,6 +49,7 @@ module.exports = {
 					'dev/php/includes/gravityforms-contactform.xml',
 					'dev/php/templates/functions.php',
 					'dev/php/templates/template-contact.php',
+					'dev/php/templates/header.php',
 					'dev/js/google-maps.js'
 				]
 			}

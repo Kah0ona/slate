@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Title -->
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title( '|', true, 'right' ); ?><?php echo get_bloginfo( 'name' ); ?></title>
 
     <!-- Mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,5 +41,31 @@
   </head>
   <body <?php body_class(); ?> >
 
-    <!-- Main navigation -->
-    <?php include 'includes/navigation.php'; ?>
+
+  <div class="Bot-Nav">
+	<div class="u-gridContainer">
+		<div class="Nav-toggle u-cf">
+			<a class="Navigation-menuToggle" id="js-navCollapse">
+				<svg class="Icon Icon--inline" viewBox="0 0 128 128">
+					<use xlink:href="#icon-menu2"></use>
+				</svg>
+			</a>
+		</div>
+
+		<?php include 'includes/navigation.php'; ?>
+		
+		<div class="Mob-contact-ico">
+			<a class="Button Button--transparent u-textInverted u-noLine telsvg" href="tel:@@clientPhone">
+				<svg class="Icon Icon--inline" viewBox="0 0 128 128">
+					<use xlink:href="#icon-phone"></use>
+				</svg>
+			</a>
+		
+,                <a class="Button Button--transparent u-textInverted u-noLine mailsvg" href="mailto:@@clientEmail">
+				<svg class="Icon Icon--inline" viewBox="0 0 128 128">
+					<use xlink:href="#icon-envelope"></use>
+				</svg>
+			</a>
+		</div><!-- header-contact -->
+	</div>
+  </div>
