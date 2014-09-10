@@ -78,6 +78,15 @@
 .u-gridCol12 {
 	@include span-columns(12);
 }
+//$tabletBreakPoint is _settings.scss
+@media screen and (max-width: $gridColSpan12Breakpoint){
+	.u-gridCol1, .u-gridCol2, .u-gridCol3, .u-gridCol4, .u-gridCol5,
+	.u-gridCol6, .u-gridCol7, .u-gridCol8, .u-gridCol9, .u-gridCol10,
+	.u-gridCol11 {
+		@include span-columns(12);
+	}
+
+}
 // -------------------------------------
 // Text
 // -------------------------------------

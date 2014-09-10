@@ -61,7 +61,7 @@
 				</svg>
 			</a>
 		
-,                <a class="Button Button--transparent u-textInverted u-noLine mailsvg" href="mailto:@@clientEmail">
+                <a class="Button Button--transparent u-textInverted u-noLine mailsvg" href="mailto:@@clientEmail">
 				<svg class="Icon Icon--inline" viewBox="0 0 128 128">
 					<use xlink:href="#icon-envelope"></use>
 				</svg>
