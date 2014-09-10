@@ -11,6 +11,7 @@ module.exports = {
     tasks: [
       'sass:expanded',
       'autoprefixer:expanded',
+	  'copy:img_child',
       //'csslint:expanded',
       'rsync:deploy_child'
     ]
@@ -18,7 +19,7 @@ module.exports = {
   svg: {
     files: ['dev/ico/library/**/*.svg'],
     tasks: [
-      //'svgstore:all',
+      'svgstore:all',
       'rsync:deploy_child'
     ]
   },
@@ -28,6 +29,7 @@ module.exports = {
       'jsbeautifier:js',
      // 'jshint:strict',
       'newer:copy:js',
+	  'copy:img_child',
       'rsync:deploy_child'
     ]
   },
@@ -38,6 +40,7 @@ module.exports = {
       'delete_sync:php_templates',
       'delete_sync:php_includes',
       'processhtml:expanded',
+	  'copy:img_child',
       'rsync:deploy_child'
     ]
   },
