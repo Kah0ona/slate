@@ -1,0 +1,27 @@
+// CSS that work on dropdown  of submenu items
+
+.Navigation-listItem--hasDropdown {
+    position: relative;
+    text-decoration: none;
+}
+
+ul.Navigation-list--dropdown {
+    display: block;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    line-height: 40px;
+    z-index: 9999;
+    margin-top: 27px;
+}
+
+ul.Navigation-list--dropdown li.Navigation-listItem {
+    display: block;
+    padding: 0px 2px;
+    margin: 0px auto;
+    border: 0px none;
+}
+
+.Navigation-list.is-hidden {
+	display: none;
+}
