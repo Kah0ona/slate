@@ -17,18 +17,18 @@
 
 // ----- Bourbon Neat ----- //
 @import "../../lib/scss/neat/neat";
- 
+
 // ----- Native wordpress styles ----- //
 @import "../../lib/scss/wp/wp";
- 
+
 // ----- Override ----- //
 @import "../../lib/scss/libs-override";
-    
+
 // -------------------------------------
 // Core
 // -------------------------------------
 
-
+// ----- Helpers ----- //
 @import "core/helpers";
 
 // ----- Settings ----- //
@@ -60,9 +60,9 @@
 
 @import "modules/navigation";
 
-@import "modules/responsive-nav";
-
 @import "modules/table";
+
+@import "modules/content";
 
 // -------------------------------------
 // Inbox

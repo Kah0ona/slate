@@ -23,19 +23,15 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 
 #####Git
 
+* Use the `cd` command to navigate to your projects directory where you keep all your sites. (ie. cd ~/Desktop/sites)
 * Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory, in a useful directory:
 `git clone https://github.com/Kah0ona/slate.git <projectname>`
-* cd <projectname>
+* Now slate is downloaded. Now use `cd <projectname>` to navigate INTO the newly downloaded directory.
+* run `npm install`
+* If it is a new project: run `grunt init`, else, if it is an existing project run `grunt reinit`
 * Create a new repository for your project on github
 
-#####Setup
-
-* Run `npm install`
-* If it is a new project: run `grunt init`, else, if it is an existing project run `grunt reinit`
-* when running`grunt init`, follow the instructions carefully.
-
 #####Wordpress
-
 * Create a new wordpress site
 * `Network enable` your parent theme (if not enabled already)
 * `Network enable` your child theme
