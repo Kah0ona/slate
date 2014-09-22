@@ -29,4 +29,6 @@ if(is_admin() && !$initialized){
 }
 
 
+include_once('includes/antispam.php');
+
 ?>
