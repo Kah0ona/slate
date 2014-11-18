@@ -5,7 +5,7 @@
 //
 // *************************************
 
-$(function() {
+jQuery(document).ready(function() {
   var menu = $('#js-navCollapseTarget');
   var menuToggle = $('#js-navCollapse');
 

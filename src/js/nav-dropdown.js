@@ -10,7 +10,7 @@
 // allow only one open menu at a time
 // -------------------------------------
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
   // When a dropdown trigger is clicked
   $('.js-navDropdown').click(function(e) {
