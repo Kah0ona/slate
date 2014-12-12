@@ -17,7 +17,6 @@ jQuery(document).ready(function($) {
     controls: true,
     onSliderLoad: function() {
       $('.Slider').css('visibility', 'visible');
-
     }
   });
 });
