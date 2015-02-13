@@ -47,7 +47,6 @@ module.exports = {
   img: {
     files: ['dev/img/**/*'],
     tasks: [
-      //'newer:imagemin:all',
       'delete_sync:img',
       'rsync:deploy_child'
     ]
