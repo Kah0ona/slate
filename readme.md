@@ -27,6 +27,7 @@ Note: On Windows, one might want to use Console2 instead of the normal cmd promp
 * Clone [Slate](https://github.com/Kah0ona/slate) to your local working directory, in a useful directory:
 `git clone https://github.com/Kah0ona/slate.git <projectname>`
 * Now slate is downloaded. Now use `cd <projectname>` to navigate INTO the newly downloaded directory.
+* WINDOWS ONLY: run `git checkout windows`. Now the default uses ftpush rather than rsync
 * run `npm install`
 * If it is a new project: run `grunt init`, else, if it is an existing project run `grunt reinit`
 * Create a new repository for your project on github
