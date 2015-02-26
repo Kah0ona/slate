@@ -40,9 +40,9 @@ module.exports = function (grunt) {
     'copy:bower_libs',
     // Build themes and deploy them
     'build:parent',
-    'rsync:deploy_parent',
+    'ftpush:deploy_parent',
     'build:child:expanded',
-    'rsync:deploy_child'
+    'ftpush:deploy_child'
   ]);
 
   // ----- Grunt reinit ----- //
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
     'copy:bower_libs',
     // Build child theme
     'build:child:expanded',
-    'rsync:deploy_child'
+    'ftpush:deploy_child'
   ]);
 
   // ----- Grunt develop ----- //
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', 'Deploy compressed child theme to live server.', [
     'clean:child',
     'build:child:compressed',
-	'rsync:deploy_child'
+	'ftpush:deploy_child'
   ]);
 
   // ----- Grunt build ----- //
