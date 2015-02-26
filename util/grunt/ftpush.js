@@ -17,7 +17,7 @@ module.exports = {
     src: 'dist/child',
     dest: '/wp-content/themes/slate-<%= package.version %>_<%= package.name %>',
     simple: true,
-    useList: true
+    useList: false
   },
 
   // ----- Mirror parent theme to server ----- //
@@ -31,6 +31,6 @@ module.exports = {
     src: 'dist/parent',
     dest: '/wp-content/themes/slate-<%= package.version %>',
     simple: true,
-    useList: true
+    useList: false
   }
 };
