@@ -19,6 +19,10 @@ module.exports = {
 					replacement: 'includes/gravityforms-contactform.xml'
 				},
 				{
+					match: 'gravityform_json_url',
+					replacement: 'includes/gravityforms-contactform.json'
+				},
+				{
 					match: 'clientStreet',
 					replacement: '<%= clientStreet %>'
 				},
@@ -47,6 +51,7 @@ module.exports = {
 				flatten: false, 
 				src: [
 					'dev/php/includes/gravityforms-contactform.xml',
+					'dev/php/includes/gravityforms-contactform.json',
 					'dev/php/templates/functions.php',
 					'dev/php/templates/template-contact.php',
 					'dev/php/templates/header.php',
