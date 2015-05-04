@@ -10,6 +10,6 @@ $.ajax({
   method: "GET",
   dataType: "html",
   success: function(data) {
-    $("body").prepend(data);
+    jQuery("body").prepend(data);
   }
 })
